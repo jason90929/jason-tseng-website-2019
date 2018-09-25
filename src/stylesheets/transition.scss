@@ -1,0 +1,136 @@
+$translate-left-x-timing-function: cubic-bezier(0, 1, .25, 1);
+$translate-left-x-duration: .5s;
+.translate-left-x {
+  transform: translateX(-100%);
+  transition:
+    transform $translate-left-x-duration $translate-left-x-timing-function;
+  pointer-events: none;
+}
+
+.translate-left-x-active {
+  transform: none;
+  transition:
+    transform $translate-left-x-duration $translate-left-x-timing-function;
+  pointer-events: auto;
+}
+
+.translate-right-x {
+  transform: translateX(100%);
+  transition:
+    transform $translate-left-x-duration $translate-left-x-timing-function;
+  pointer-events: none;
+}
+
+.translate-right-x-active {
+  transform: none;
+  transition:
+    transform $translate-left-x-duration $translate-left-x-timing-function;
+  pointer-events: auto;
+}
+
+$bounce-timing-function: cubic-bezier(0, 1, .25, 1);
+$bounce-duration: .5s;
+.bounce-in {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(.85);
+  transition:
+    opacity $bounce-duration $bounce-timing-function,
+    visibility 0s $bounce-timing-function $bounce-duration,
+    transform $bounce-duration $bounce-timing-function;
+  pointer-events: none;
+}
+
+.bounce-in-active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition:
+    opacity $bounce-duration $bounce-timing-function,
+    transform $bounce-duration $bounce-timing-function;
+  pointer-events: auto;
+}
+
+$brush-timing-function: cubic-bezier(.5, .9, .7, 1);
+.brush-effect {
+  -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  transition: -webkit-clip-path .25s $brush-timing-function, clip-path .25s $brush-timing-function;
+  pointer-events: none;
+
+  &.brush-effect-active {
+    -webkit-clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    pointer-events: auto;
+  }
+}
+
+$brush-timing-function: cubic-bezier(.5, .9, .7, 1);
+.falldown {
+  -webkit-clip-path: polygon(100% 0, 0 0, 0 0, 100% 0);
+  clip-path: polygon(100% 0, 0 0, 0 0, 100% 0);
+  transition: -webkit-clip-path 1s $brush-timing-function, clip-path 1s $brush-timing-function;
+  pointer-events: none;
+
+  &.falldown-active {
+    -webkit-clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    pointer-events: auto;
+  }
+}
+
+$fade-timing-function: ease-out;
+$fade-duration: .2s;
+.fade-in {
+  opacity: 0;
+  visibility: hidden;
+  transition-property: opacity, visibility;
+  transition-duration: $fade-duration, 0s;
+  transition-timing-function: $fade-timing-function, $fade-timing-function;
+  transition-delay: 0s, $fade-duration;
+  //transition: opacity $fade-duration $fade-timing-function,
+  //  visibility 0s $fade-timing-function $fade-duration;
+  pointer-events: none
+}
+
+.fade-in-active {
+  opacity: 1;
+  visibility: visible;
+  transition-property: opacity;
+  transition-duration: $fade-duration;
+  transition-timing-function: $fade-timing-function;
+  //transition: opacity $fade-duration $fade-timing-function;
+  pointer-events: auto;
+}
+
+.spotlight {
+  -webkit-clip-path: circle(100% at 50% 50%);
+  clip-path: circle(100% at 50% 50%);
+  transition: -webkit-clip-path 1s $brush-timing-function, clip-path 1s $brush-timing-function;
+  pointer-events: none;
+
+  &.spotlight-active {
+    -webkit-clip-path: circle(0 at 50% 50%);
+    clip-path: circle(0 at 50% 50%);
+  }
+}
+
+.skew {
+  transition: transform .3s ease-out;
+  transform-origin: bottom center;
+  perspective: 600px;
+
+  &.skew-active {
+    transform: rotateX(30deg);
+  }
+}
+
+.max-height-transition {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .3s ease-out;
+
+  &.max-height-transition-active {
+    // Do by your custom style for specific height you need, can't be 100%
+  }
+}
