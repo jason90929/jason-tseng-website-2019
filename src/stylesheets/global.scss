@@ -1,3 +1,5 @@
+@import './fonts';
+
 html, body {
   position: relative;
   width: 100%;
@@ -12,7 +14,23 @@ html, body {
 
 * {
   box-sizing: border-box;
-  font-family: 'Helvetica', '微軟正黑體', 'Microsoft JhengHei', '微軟雅黑體', 'Microsoft YaHei', 'sans-serif';
+  font-family: 'Helvetica', 'XinGothic', 'Microsoft JhengHei', '微軟正黑體', 'Microsoft YaHei', '微軟雅黑體', 'sans-serif';
+}
+
+.oswald-Bold {
+  font-family: 'Oswald-Bold', 'Microsoft JhengHei', '微軟正黑體', 'Microsoft YaHei', '微軟雅黑體', 'sans-serif';
+}
+
+.oswald-light {
+  font-family: 'Oswald-Light', 'Microsoft JhengHei', '微軟正黑體', 'Microsoft YaHei', '微軟雅黑體', 'sans-serif';
+}
+
+.oswald-medium {
+  font-family: 'Oswald-Medium', 'Microsoft JhengHei', '微軟正黑體', 'Microsoft YaHei', '微軟雅黑體', 'sans-serif';
+}
+
+.nocturno {
+  font-family: 'Nocturno', 'Microsoft JhengHei', '微軟正黑體', 'Microsoft YaHei', '微軟雅黑體', 'sans-serif';
 }
 
 h1, h2, h3, h4, h5, h6, p {
