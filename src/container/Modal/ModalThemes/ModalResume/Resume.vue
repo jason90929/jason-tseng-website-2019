@@ -1,5 +1,7 @@
 <template>
-  <article class="resume">
+  <article
+    ref="resume"
+    class="resume">
     <div class="oswald-bold resume-header">
       <h1>Jason Tseng</h1>
       <h2>Frontend Developer</h2>
@@ -38,25 +40,31 @@
       </pre>
 
       <h3>Experience</h3>
-
-      <h6>2017/02 - present</h6>
+      <br>
+      <h6 class="oswald-light">2017/02 - present</h6>
       <h4>iStaging</h4>
-      <h5>VR/AR for B2B2C solution</h5>
-
-      <h6>2016/04 - 2017/01</h6>
+      <p>VR/AR for B2B2C solution</p>
+      <br>
+      <h6 class="oswald-light">2016/04 - 2017/01</h6>
       <h4>Nong Design</h4>
-      <h5>Case jobs for Wordpress website</h5>
-
-      <h6>2014/08 - 2016/03</h6>
+      <p>Case jobs for Wordpress website</p>
+      <br>
+      <h6 class="oswald-light">2014/08 - 2016/03</h6>
       <h4>Wethink</h4>
-      <h5>Case jobs for Software assistant and human resource</h5>
+      <p>Case jobs for Software assistant and human resource</p>
     </div>
   </article>
 </template>
 
 <script>
+import VanillaTilt from 'vanilla-tilt'
 export default {
-  name: 'Resume'
+  name: 'Resume',
+  mounted () {
+    VanillaTilt.init(this.$refs.resume, {
+      max: 1
+    })
+  }
 }
 </script>
 
