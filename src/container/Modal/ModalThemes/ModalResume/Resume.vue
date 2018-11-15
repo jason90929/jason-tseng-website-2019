@@ -62,14 +62,8 @@
 </template>
 
 <script>
-import VanillaTilt from 'vanilla-tilt'
 export default {
-  name: 'Resume',
-  mounted () {
-    VanillaTilt.init(this.$refs.resume, {
-      max: 1
-    })
-  }
+  name: 'Resume'
 }
 </script>
 
