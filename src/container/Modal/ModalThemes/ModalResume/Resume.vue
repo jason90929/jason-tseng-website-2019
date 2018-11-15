@@ -7,6 +7,12 @@
       <h2>Frontend Developer</h2>
     </div>
     <div class="resume-content">
+      <h3>
+        Introduction
+      </h3>
+      <p>
+        4 years development experience
+      </p>
       <h3>Education</h3>
       <p>
         National Taichung University of Science and Technology
@@ -55,8 +61,7 @@
       <p>Do lots of CSS animation on websites</p>
       <br>
       <h6 class="oswald-light">2014/08 - 2016/03</h6>
-      <h4>Wethink</h4>
-      <p>Case jobs for Software assistant and human resource</p>
+      <h4>Wethink - Case jobs for Software assistant and human resource</h4>
     </div>
   </article>
 </template>
