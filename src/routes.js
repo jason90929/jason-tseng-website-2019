@@ -14,15 +14,15 @@ const routes = (
     <AppComponent>
       <ul>
         <li><ALink to="/">首頁</ALink></li>
-        <li><ALink to="/about">關於</ALink></li>
+        <li><ALink to="/portfolio">Portfolio</ALink></li>
         <li><ALink to="/redux">測試 redux</ALink></li>
       </ul>
       <hr />
       <Route exact path="/" component={Home} />
       <Route
-        path="/about"
+        path="/portfolio"
         component={Loadable({
-          loader: () => import('./pages/About/About'),
+          loader: () => import('./pages/Portfolio/Portfolio'),
           loading: Loading,
         })}
       />

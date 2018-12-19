@@ -5,7 +5,6 @@ class Redux extends Component {
   render () {
     return (
       <div>
-        數數
         <Counter />
       </div>
     )
