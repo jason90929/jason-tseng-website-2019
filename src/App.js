@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Footer from './container/Footer'
-import Header from './container/Header'
+import Header from './container/Header/Header'
 import Main from './container/Main'
-import Background from './container/Background'
+import Background from './container/Background/Background'
 
 class App extends Component {
   render () {
