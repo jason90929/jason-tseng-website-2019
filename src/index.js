@@ -8,6 +8,7 @@ import { connectRouter, routerMiddleware } from 'connected-react-router'
 import ReactDOM from 'react-dom'
 import App from './App'
 import rootReducer from './reducers'
+import './index.scss'
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {

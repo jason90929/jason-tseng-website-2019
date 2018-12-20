@@ -8,7 +8,8 @@ class Portfolio extends Component {
         <p>
           <a
             href="https://cobinhood-assignment-jason.firebaseapp.com"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             https://cobinhood-assignment-jason.firebaseapp.com
           </a>
         </p>
@@ -24,7 +25,8 @@ class Portfolio extends Component {
         <p>
           <a
             href="https://tourring.istaging.com/483490"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             https://tourring.istaging.com/483490
           </a>
         </p>
@@ -41,7 +43,8 @@ class Portfolio extends Component {
         <p>
           <a
             href="http://3d-dollhouse.avosapps.us/scene/62cb3510-6708-4f62-94c3-f9936db7e20b"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://3d-dollhouse.avosapps.us/scene/62cb3510-6708-4f62-94c3-f9936db7e20b
           </a>
         </p>
@@ -55,7 +58,8 @@ class Portfolio extends Component {
         <p>
           <a
             href="https://livetour.istaging.com/57ecd104816dfa005668e914"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             https://livetour.istaging.com/57ecd104816dfa005668e914
           </a>
         </p>
@@ -70,7 +74,8 @@ class Portfolio extends Component {
         <p>
           <a
             href="https://vreditor.istaging.com"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             https://vreditor.istaging.com
           </a>
         </p>
@@ -87,7 +92,8 @@ class Portfolio extends Component {
         <p>
           <a
             href="http://www.moldex3d.com/en"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://www.moldex3d.com/en
           </a>
         </p>
@@ -100,7 +106,8 @@ class Portfolio extends Component {
         <p>
           <a
             href="http://nongdesign.site/lizard"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://nongdesign.site/lizard
           </a>
         </p>
@@ -113,7 +120,8 @@ class Portfolio extends Component {
         <p>
           <a
             href="http://nongdesign.site"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://nongdesign.site
           </a>
         </p>
@@ -126,7 +134,8 @@ class Portfolio extends Component {
         <p>
           <a
             href="https://cnews.com.tw"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             https://cnews.com.tw
           </a>
         </p>
@@ -139,7 +148,8 @@ class Portfolio extends Component {
         <p>
           <a
             href="http://home-i.com.tw"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://home-i.com.tw
           </a>
         </p>
@@ -152,7 +162,8 @@ class Portfolio extends Component {
         <p>
           <a
             href="http://girlfie.com.tw"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://girlfie.com.tw
           </a>
         </p>
@@ -165,7 +176,8 @@ class Portfolio extends Component {
         <p>
           <a
             href="http://ctop.com.s3-website-ap-northeast-1.amazonaws.com"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://ctop.com.s3-website-ap-northeast-1.amazonaws.com
           </a>
         </p>
@@ -177,119 +189,136 @@ class Portfolio extends Component {
         <p>
           <a
             href="http://delta.com.s3-website-ap-northeast-1.amazonaws.com/01.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://delta.com.s3-website-ap-northeast-1.amazonaws.com/01.html
           </a>
         </p>
         <p>
           <a
             href="http://delta.com.s3-website-ap-northeast-1.amazonaws.com/02.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://delta.com.s3-website-ap-northeast-1.amazonaws.com/02.html
           </a>
         </p>
         <p>
           <a
             href="http://delta.com.s3-website-ap-northeast-1.amazonaws.com/03.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://delta.com.s3-website-ap-northeast-1.amazonaws.com/03.html
           </a>
         </p>
         <p>
           <a
             href="http://delta.com.s3-website-ap-northeast-1.amazonaws.com/04.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://delta.com.s3-website-ap-northeast-1.amazonaws.com/04.html
           </a>
         </p>
         <p>
           <a
             href="http://delta.com.s3-website-ap-northeast-1.amazonaws.com/05.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://delta.com.s3-website-ap-northeast-1.amazonaws.com/05.html
           </a>
         </p>
         <p>
           <a
             href="http://delta.com.s3-website-ap-northeast-1.amazonaws.com/06.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://delta.com.s3-website-ap-northeast-1.amazonaws.com/06.html
           </a>
         </p>
         <p>
           <a
             href="http://delta.com.s3-website-ap-northeast-1.amazonaws.com/07.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://delta.com.s3-website-ap-northeast-1.amazonaws.com/07.html
           </a>
         </p>
         <p>
           <a
             href="http://delta.com.s3-website-ap-northeast-1.amazonaws.com/08.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://delta.com.s3-website-ap-northeast-1.amazonaws.com/08.html
           </a>
         </p>
         <p>
           <a
             href="http://delta.com.s3-website-ap-northeast-1.amazonaws.com/09.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://delta.com.s3-website-ap-northeast-1.amazonaws.com/09.html
           </a>
         </p>
         <p>
           <a
             href="http://delta.com.s3-website-ap-northeast-1.amazonaws.com/10.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://delta.com.s3-website-ap-northeast-1.amazonaws.com/10.html
           </a>
         </p>
         <p>
           <a
             href="http://delta.com.s3-website-ap-northeast-1.amazonaws.com/11.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://delta.com.s3-website-ap-northeast-1.amazonaws.com/11.html
           </a>
         </p>
         <p>
           <a
             href="http://delta.com.s3-website-ap-northeast-1.amazonaws.com/12.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://delta.com.s3-website-ap-northeast-1.amazonaws.com/12.html
           </a>
         </p>
         <p>
           <a
             href="http://delta.com.s3-website-ap-northeast-1.amazonaws.com/13.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://delta.com.s3-website-ap-northeast-1.amazonaws.com/13.html
           </a>
         </p>
         <p>
           <a
             href="http://delta.com.s3-website-ap-northeast-1.amazonaws.com/14.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://delta.com.s3-website-ap-northeast-1.amazonaws.com/14.html
           </a>
         </p>
         <p>
           <a
             href="http://delta.com.s3-website-ap-northeast-1.amazonaws.com/15.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://delta.com.s3-website-ap-northeast-1.amazonaws.com/15.html
           </a>
         </p>
         <p>
           <a
             href="http://delta.com.s3-website-ap-northeast-1.amazonaws.com/16.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://delta.com.s3-website-ap-northeast-1.amazonaws.com/16.html
           </a>
         </p>
         <p>
           <a
             href="http://delta.com.s3-website-ap-northeast-1.amazonaws.com/17.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://delta.com.s3-website-ap-northeast-1.amazonaws.com/17.html
           </a>
         </p>
@@ -301,98 +330,112 @@ class Portfolio extends Component {
         <p>
           <a
             href="http://mywedding.com.s3-website-ap-northeast-1.amazonaws.com/11.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://mywedding.com.s3-website-ap-northeast-1.amazonaws.com/11.html
           </a>
         </p>
         <p>
           <a
             href="http://mywedding.com.s3-website-ap-northeast-1.amazonaws.com/11_1.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://mywedding.com.s3-website-ap-northeast-1.amazonaws.com/11_1.html
           </a>
         </p>
         <p>
           <a
             href="http://mywedding.com.s3-website-ap-northeast-1.amazonaws.com/12_1.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://mywedding.com.s3-website-ap-northeast-1.amazonaws.com/12_1.html
           </a>
         </p>
         <p>
           <a
             href="http://mywedding.com.s3-website-ap-northeast-1.amazonaws.com/12_2.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://mywedding.com.s3-website-ap-northeast-1.amazonaws.com/12_2.html
           </a>
         </p>
         <p>
           <a
             href="http://mywedding.com.s3-website-ap-northeast-1.amazonaws.com/13_1.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://mywedding.com.s3-website-ap-northeast-1.amazonaws.com/13_1.html
           </a>
         </p>
         <p>
           <a
             href="http://mywedding.com.s3-website-ap-northeast-1.amazonaws.com/13_2.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://mywedding.com.s3-website-ap-northeast-1.amazonaws.com/13_2.html
           </a>
         </p>
         <p>
           <a
             href="http://mywedding.com.s3-website-ap-northeast-1.amazonaws.com/13_3.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://mywedding.com.s3-website-ap-northeast-1.amazonaws.com/13_3.html
           </a>
         </p>
         <p>
           <a
             href="http://mywedding.com.s3-website-ap-northeast-1.amazonaws.com/14_1.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://mywedding.com.s3-website-ap-northeast-1.amazonaws.com/14_1.html
           </a>
         </p>
         <p>
           <a
             href="http://mywedding.com.s3-website-ap-northeast-1.amazonaws.com/14_2.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://mywedding.com.s3-website-ap-northeast-1.amazonaws.com/14_2.html
           </a>
         </p>
         <p>
           <a
             href="http://mywedding.com.s3-website-ap-northeast-1.amazonaws.com/14_3.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://mywedding.com.s3-website-ap-northeast-1.amazonaws.com/14_3.html
           </a>
         </p>
         <p>
           <a
             href="http://mywedding.com.s3-website-ap-northeast-1.amazonaws.com/15_0.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://mywedding.com.s3-website-ap-northeast-1.amazonaws.com/15_0.html
           </a>
         </p>
         <p>
           <a
             href="http://mywedding.com.s3-website-ap-northeast-1.amazonaws.com/15_1.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://mywedding.com.s3-website-ap-northeast-1.amazonaws.com/15_1.html
           </a>
         </p>
         <p>
           <a
             href="http://mywedding.com.s3-website-ap-northeast-1.amazonaws.com/15_2.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://mywedding.com.s3-website-ap-northeast-1.amazonaws.com/15_2.html
           </a>
         </p>
         <p>
           <a
             href="https://www.my-wedding.tw/index.php"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             https://www.my-wedding.tw/index.php
           </a>
         </p>
@@ -407,7 +450,8 @@ class Portfolio extends Component {
         <p>
           <a
             href="https://jason90929.github.io"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             https://jason90929.github.io
           </a>
         </p>
@@ -421,13 +465,17 @@ class Portfolio extends Component {
         <p>
           <a
             href="https://jason-tseng.com/sample/tin-group"
-            target="_blank">https://jason-tseng.com/sample/tin-group(static)
+            target="_blank"
+            rel="noopener noreferrer">
+            https://jason-tseng.com/sample/tin-group(static)
           </a>
         </p>
         <p>
           <a
             href="http://groupbuy.tintinpiano.com/index.php"
-            target="_blank">http://groupbuy.tintinpiano.com/index.php(Real online)
+            target="_blank"
+            rel="noopener noreferrer">
+            http://groupbuy.tintinpiano.com/index.php(Real online)
           </a>
         </p>
         <ul>
@@ -438,21 +486,24 @@ class Portfolio extends Component {
         <p>
           <a
             href="http://gopapala.s3-website-ap-northeast-1.amazonaws.com"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://gopapala.s3-website-ap-northeast-1.amazonaws.com
           </a>
         </p>
         <p>
           <a
             href="http://gopapala.s3-website-ap-northeast-1.amazonaws.com/invite.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://gopapala.s3-website-ap-northeast-1.amazonaws.com/invite.html
           </a>
         </p>
         <p>
           <a
             href="http://gopapala.s3-website-ap-northeast-1.amazonaws.com/profile.html"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             http://gopapala.s3-website-ap-northeast-1.amazonaws.com/profile.html
           </a>
         </p>
