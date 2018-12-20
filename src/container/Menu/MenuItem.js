@@ -4,7 +4,7 @@ import './menu-item.scss'
 class MenuItem extends Component {
   render () {
     return (
-      <li>
+      <li className="menu-item">
         <a
           role="button">
           {this.props.text}
