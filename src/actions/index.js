@@ -1,7 +1,7 @@
-import counter from './counter';
+import loading from './loading';
 
 const actions = {
-  counter,
+  loading,
 };
 
 export default actions;

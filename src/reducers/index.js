@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
-import counterReducer from './counter'
+import loadingReducer from './loading'
 
 export default combineReducers({
-  count: counterReducer
+  loading: loadingReducer
 })
