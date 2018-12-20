@@ -1,12 +1,16 @@
-import PropTypes from 'prop-types'
-import routes from './routes'
+import React, { Component } from 'react'
+import Footer from './container/Footer'
+import Header from './container/Header'
+import Main from './container/Main'
 
-const App = () => (
-  routes
-)
-
-App.propTypes = {
-  history: PropTypes.objectOf(PropTypes.any).isRequired
+class App extends Component {
+  render () {
+    return [
+      <Header key="Header" />,
+      <Main key="Main" />,
+      <Footer key="Footer" />
+    ]
+  }
 }
 
 export default App
