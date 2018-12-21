@@ -2,7 +2,7 @@ import { updateObject } from '../resources/utility'
 
 const initialState = {
   currentLoading: 0,
-  maxLoading: 100,
+  maxLoading: 1,
   isLoadingComplete: false
 }
 
