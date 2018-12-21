@@ -5,20 +5,24 @@ import cx from 'classnames'
 
 class CircleEffect extends Component {
   static defaultProps = {
-    active: false,
-    className: PropTypes.string
+    progress: -1000, // from -1000 to 0
+    color: '#22d8da',
+    className: ''
   }
 
   static propTypes = {
-    active: PropTypes.bool,
+    progress: PropTypes.number,
+    color: PropTypes.string,
     className: PropTypes.string
   }
 
   render () {
     const className = cx('circle', {
-      'circle-active': this.props.active,
       [this.props.className]: this.props.className,
     })
+    const style = {
+      'stroke-dashoffset': this.props.progress
+    }
     return (
       <svg
         className={className}
@@ -30,6 +34,8 @@ class CircleEffect extends Component {
         xmlSpace="preserve">
         <path
           fill="none"
+          style={style}
+          stroke={this.props.color}
           d="M125,0 C56,0,0,56,0,125s56,125,125,125s125-56,125-125S194,0,125,0L125,0z">
         </path>
       </svg>
