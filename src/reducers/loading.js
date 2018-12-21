@@ -9,15 +9,13 @@ const initialState = {
 const loadingReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'INCREMENT':
-      if (state.currentLoading >= state.maxLoading) {
-        return updateObject(state, {
-          isLoadingComplete: true
-        })
-      } else {
-        return updateObject(state, {
-          currentLoading: state.currentLoading + 1
-        })
-      }
+      return updateObject(state, {
+        currentLoading: state.currentLoading + 1
+      })
+    case 'LOADING_COMPLETE':
+      return updateObject(state, {
+        isLoadingComplete: true
+      })
     default:
       return state
   }

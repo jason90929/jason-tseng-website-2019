@@ -1,4 +1,5 @@
 import React from 'react'
+import thunk from 'redux-thunk'
 import { AppContainer } from 'react-hot-loader'
 import { createBrowserHistory } from 'history'
 import { applyMiddleware, compose, createStore } from 'redux'
@@ -32,7 +33,7 @@ const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const store = createStore(
   connectRouter(history)(rootReducer),
   initialState,
-  composeEnhancer(applyMiddleware(...middleware))
+  composeEnhancer(applyMiddleware(thunk, ...middleware))
 )
 
 const render = () => {
