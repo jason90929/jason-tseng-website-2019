@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import loading from '../actions/loading'
+import loading from '../../actions/loading'
 import connect from 'react-redux/es/connect/connect'
+import Background from '../Background/Background'
 
 class Loading extends Component {
   componentDidMount () {
@@ -11,10 +12,11 @@ class Loading extends Component {
 
   render () {
     return (
-      <progress
-        value={this.props.currentLoading}
-        max={this.props.maxLoading}>
-      </progress>
+      <div className="loading">
+        <Background
+          boxActive={this.props.isLoadingComplete}
+          key="Background" />
+      </div>
     )
   }
 }

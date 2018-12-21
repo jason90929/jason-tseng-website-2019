@@ -4,6 +4,11 @@ import './modal.scss'
 
 class Modal extends Component {
   static defaultProps = {
+    closable: false,
+    children: null
+  }
+
+  static propTypes = {
     closable: PropTypes.bool,
     children: PropTypes.node
   }

@@ -1,18 +1,10 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux';
 import './background.scss'
 
 class Background extends Component {
-  constructor () {
-    super()
-    this.state = {
-      boxActive: false
-    }
-  }
-
   render () {
     let boxClass = 'box'
-    if (this.props.isLoadingComplete === true) {
+    if (this.props.boxActive === true) {
       boxClass += ' box-active'
     }
     return (
@@ -30,12 +22,4 @@ class Background extends Component {
   }
 }
 
-const mapStateToProps = (state, ownProps) => {
-  return {
-    isLoadingComplete: state.loading.isLoadingComplete
-  };
-};
-
-export default connect(
-  mapStateToProps
-)(Background)
+export default Background

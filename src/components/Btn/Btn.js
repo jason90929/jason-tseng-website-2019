@@ -4,6 +4,12 @@ import './btn.scss'
 
 class Btn extends Component {
   static defaultProps = {
+    className: '',
+    onClick: () => {},
+    children: null
+  }
+
+  static propTypes = {
     className: PropTypes.string,
     onClick: PropTypes.func,
     children: PropTypes.node

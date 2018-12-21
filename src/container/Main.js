@@ -1,13 +1,11 @@
 import React, { Component } from 'react'
-import Background from './Background/Background'
-import Loading from '../components/Loading'
+import Loading from './Loading/Loading'
 
 class Main extends Component {
   render () {
     return (
       <main>
-        <Loading key="Loading" />
-        <Background key="Background" />
+        <Loading />
       </main>
     )
   }
