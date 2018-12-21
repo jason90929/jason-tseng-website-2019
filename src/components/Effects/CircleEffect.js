@@ -21,7 +21,7 @@ class CircleEffect extends Component {
       [this.props.className]: this.props.className,
     })
     const style = {
-      'stroke-dashoffset': this.props.progress
+      strokeDashoffset: this.props.progress
     }
     return (
       <svg
