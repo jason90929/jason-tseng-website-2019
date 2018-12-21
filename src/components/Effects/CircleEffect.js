@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import './circle-effect.scss'
 import cx from 'classnames'
+import './circle-effect.scss'
 
 class CircleEffect extends Component {
   static defaultProps = {

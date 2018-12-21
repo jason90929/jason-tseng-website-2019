@@ -3,9 +3,8 @@ import connect from 'react-redux/es/connect/connect'
 import loading from '../../actions/loading'
 import Background from '../Background/Background'
 import FullCenter from '../../components/FullCenter/FullCenter'
-import Icon from '../../components/Icon/Icon'
-import logo from '../../assets/images/j.png'
-import CircleEffect from '../../components/Effects/CircleEffect'
+import Logo from '../Logo'
+import './loading.scss'
 
 class Loading extends Component {
   componentDidMount () {
@@ -20,12 +19,9 @@ class Loading extends Component {
         <Background
           boxActive={this.props.isLoadingComplete}
           key="Background" />
-        <Icon
-          height="60px"
-          width="60px"
-          image={logo}>
-          <CircleEffect/>
-        </Icon>
+        <div className="logo-position">
+          <Logo />
+        </div>
       </FullCenter>
     )
   }
