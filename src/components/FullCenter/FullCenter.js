@@ -6,7 +6,7 @@ import './full-center.scss'
 class FullCenter extends Component {
   static defaultProps = {
     className: '',
-    direction: 'row'
+    direction: 'row' // row, column
   }
 
   static propTypes = {
