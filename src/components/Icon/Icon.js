@@ -14,6 +14,7 @@ class Icon extends Component {
     className: PropTypes.string,
     width: PropTypes.string,
     height: PropTypes.string,
+    style: PropTypes.object,
     hasLazyload: PropTypes.bool
   }
 
@@ -22,6 +23,7 @@ class Icon extends Component {
     className: '',
     width: '20px',
     height: '20px',
+    style: {},
     hasLazyload: false
   }
 
@@ -91,7 +93,8 @@ class Icon extends Component {
           backgroundImage,
           backgroundSize,
           width,
-          height
+          height,
+          ...this.props.style
         }}
         data-src={dataSrc}
       >
