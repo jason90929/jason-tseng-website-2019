@@ -1,19 +1,2 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'PingFangTC-Regular', 'Helvetica', '微軟正黑體', 'Microsoft JhengHei', '微軟雅黑體', 'Microsoft YaHei', 'Arial', 'sans-serif';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-ul, li, figure {
-  margin: 0;
-}
-
-li {
-  list-style-type: none;
-}
-
-a, button {
-  cursor: pointer;
-}
+@import "./assets/styles/global";
+@import "./assets/styles/fonts";
