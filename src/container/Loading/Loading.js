@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
-import loading from '../../actions/loading'
 import connect from 'react-redux/es/connect/connect'
+import loading from '../../actions/loading'
 import Background from '../Background/Background'
+import FullCenter from '../../components/FullCenter/FullCenter'
+// import Icon from '../../components/Icon/Icon'
+// import fakeImage from '../../components/Icon/盧瑞山-1.jpg'
+// import CircleEffect from '../../components/Effects/CircleEffect'
 
 class Loading extends Component {
   componentDidMount () {
@@ -12,11 +16,17 @@ class Loading extends Component {
 
   render () {
     return (
-      <div className="loading">
+      <FullCenter className="loading">
         <Background
           boxActive={this.props.isLoadingComplete}
           key="Background" />
-      </div>
+        {/*<Icon*/}
+          {/*height="60px"*/}
+          {/*width="60px"*/}
+          {/*image={fakeImage}>*/}
+          {/*<CircleEffect/>*/}
+        {/*</Icon>*/}
+      </FullCenter>
     )
   }
 }
