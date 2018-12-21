@@ -1,7 +1,14 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import './btn.scss'
 
 class Btn extends Component {
+  static defaultProps = {
+    className: PropTypes.string,
+    onClick: PropTypes.func,
+    children: PropTypes.node
+  }
+
   render () {
     return (
       <button

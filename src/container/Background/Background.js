@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import loading from '../../actions/loading';
 import './background.scss'
 
 class Background extends Component {
@@ -9,12 +8,6 @@ class Background extends Component {
     this.state = {
       boxActive: false
     }
-  }
-
-  componentDidMount () {
-    window.setTimeout(() => {
-      this.props.increment()
-    }, 2000)
   }
 
   render () {
@@ -43,13 +36,6 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-const mapDispatchToProps = (dispatch, ownProps) => {
-  return {
-    increment: () => dispatch(loading.increment())
-  };
-};
-
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+  mapStateToProps
 )(Background)
