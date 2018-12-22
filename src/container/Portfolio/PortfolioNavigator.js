@@ -5,13 +5,11 @@ import './portfolio-navigator.scss'
 
 class PortfolioNavigator extends Component {
   render () {
+    const startFrom = this.props.pageList.findIndex(page => page === 'portfolio')
     const className = cx('portfolio-navigator', {
-      'portfolio-navigator-active': this.props.currentPage >= 1
+      'portfolio-navigator-active': this.props.pageList[this.props.currentPage] === 'portfolio'
     })
-    let translateY = `-${(this.props.currentPage - 1) * 20}%`
-    if (this.props.isPaginationChanging === false) {
-
-    }
+    let translateY = `-${(this.props.currentPage - startFrom) * 20}%`
     return (
       <div className={className}>
         <span className="current-count-wrapper">
@@ -35,7 +33,8 @@ class PortfolioNavigator extends Component {
 const mapStateToProps = (state, ownProps) => {
   return {
     currentPage: state.pagination.currentPage,
-    isPaginationChanging: state.pagination.isPaginationChanging
+    isPaginationChanging: state.pagination.isPaginationChanging,
+    pageList: state.pagination.pageList
   }
 }
 

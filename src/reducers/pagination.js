@@ -2,7 +2,8 @@ import { updateObject } from '../resources/utility'
 
 const initialState = {
   currentPage: 0,
-  maxPage: 5,
+  maxPage: 7,
+  pageList: ['home', 'about', 'portfolio', 'portfolio', 'portfolio', 'portfolio', 'portfolio', 'contact'],
   isPaginationChanging: false
 }
 
