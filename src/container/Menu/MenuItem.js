@@ -1,39 +1,30 @@
 import React, { Component } from 'react'
-import {
-  Link as ALink,
-} from 'react-router-dom';
-import Btn from '../../components/Btn/Btn'
 import PropTypes from 'prop-types'
+import DoubleColorHoverText from '../../components/Effects/DoubleColorHoverText'
 import './menu-item.scss'
 
 class MenuItem extends Component {
   static defaultProps = {
     text: '',
-    to: ''
+    onClick: () => {}
   }
 
   static propTypes = {
     text: PropTypes.string,
-    to: PropTypes.string
+    onClick: PropTypes.func
   }
 
   render () {
-    let liInner = (
-      <Btn
-        className="btn-no-default">
-        {this.props.text}
-      </Btn>
-    )
-    if (this.props.to) {
-      liInner = (
-        <ALink>
-
-        </ALink>
-      )
-    }
     return (
       <li className="menu-item">
-        {liInner}
+        <a // eslint-disable-line
+          role="button"
+          onClick={this.props.onClick}>
+          <DoubleColorHoverText
+            className="menu-text"
+            text={this.props.text}>
+          </DoubleColorHoverText>
+        </a>
       </li>
     )
   }

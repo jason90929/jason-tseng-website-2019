@@ -2,6 +2,11 @@
   display: flex;
 
   + .menu-item {
-    margin-left: 1.2em;
+    margin-top: 1.2em;
   }
+}
+
+.menu-text {
+  font-size: 1.5em;
+  letter-spacing: .0875em;
 }
