@@ -15,14 +15,9 @@ class Loading extends Component {
 
   render () {
     return (
-      <FullCenter className="loading">
-        <Background
-          boxActive={this.props.isLoadingComplete}
-          key="Background" />
-        <div className="logo-position">
-          <Logo />
-        </div>
-      </FullCenter>
+      <div className="logo-position">
+        <Logo />
+      </div>
     )
   }
 }

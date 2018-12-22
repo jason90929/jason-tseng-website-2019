@@ -5,26 +5,26 @@ import './background.scss'
 
 class Background extends Component {
   static defaultProps = {
-    boxActive: false
+    lineActive: false
   }
 
   static propTypes = {
-    boxActive: PropTypes.bool
+    lineActive: PropTypes.bool
   }
 
   render () {
-    const boxClass = cx('box', {
-      'box-active': this.props.boxActive
+    const lineClass = cx('line', {
+      'line-active': this.props.lineActive
     })
     return (
       <div className="background">
-        <div className="box-container">
-          <span className={boxClass} />
-          <span className={boxClass} />
-          <span className={boxClass} />
-          <span className={boxClass} />
-          <span className={boxClass} />
-          <span className={boxClass} />
+        <div className="line-container">
+          <span className={lineClass} />
+          <span className={lineClass} />
+          <span className={lineClass} />
+          <span className={lineClass} />
+          <span className={lineClass} />
+          <span className={lineClass} />
         </div>
       </div>
     )
