@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
-import Footer from '../../container/Footer'
-import Header from '../../container/Header/Header'
-import Main from './Main/Main'
+import FirstArea from '../../container/Area/FirstArea'
+import SecondArea from '../../container/Area/SecondArea'
 
 class App extends Component {
   render () {
     return [
-      <Header key="Header" />,
-      <Main key="Main" />,
-      <Footer key="Footer" />
+      <FirstArea key="FirstArea" />,
+      <SecondArea key="SecondArea" />
     ]
   }
 }
