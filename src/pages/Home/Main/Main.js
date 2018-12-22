@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import Loading from '../Loading/Loading'
-import FirstArea from '../Area/FirstArea'
-import SecondArea from '../Area/SecondArea'
+import Loading from '../../../container/Loading/Loading'
+import FirstArea from '../../../container/Area/FirstArea'
+import SecondArea from '../../../container/Area/SecondArea'
 
 class Main extends Component {
   render () {
