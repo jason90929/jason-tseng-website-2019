@@ -9,16 +9,19 @@ import AppComponent from './container/AppComponent'
 import Header from './container/Header/Header'
 import Footer from './container/Footer'
 import Loading from './container/Loading/Loading'
+import Aside from './container/Aside/Aside'
+import './routes.scss'
 
 const routes = (
   <Router>
     <AppComponent>
-      <Loading key="Loading" />
-      <Header key="Header" />
+      <Loading />
+      <Header />
+      <Aside/>
       <main className="main">
         <Route exact path="/" component={Home} />
       </main>
-      <Footer key="Footer" />
+      <Footer />
     </AppComponent>
   </Router>
 );

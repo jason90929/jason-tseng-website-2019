@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Area from './Area'
-import DoubleColorHoverText from '../../components/Effects/DoubleColorHoverText'
 import './first-area.scss'
 
 class FirstArea extends Component {
@@ -15,12 +14,6 @@ class FirstArea extends Component {
         <p className="first-area-text">
           I make a good project structure and smooth website developing.
         </p>
-        <div className="scroll-down-position">
-          <DoubleColorHoverText
-            className="scroll-down-text"
-            text="My portfolio">
-          </DoubleColorHoverText>
-        </div>
       </Area>
     )
   }
