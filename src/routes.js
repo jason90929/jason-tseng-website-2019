@@ -7,7 +7,7 @@ import {
 import Home from './pages/Home/Home'
 import AppComponent from './container/AppComponent'
 import Aside from './container/Aside/Aside'
-import Footer from './container/Footer'
+import Footer from './container/Footer/Footer'
 import Header from './container/Header/Header'
 import Loading from './container/Loading/Loading'
 import Main from './container/Main/Main'

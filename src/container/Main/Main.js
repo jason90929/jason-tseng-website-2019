@@ -10,9 +10,10 @@ class Main extends Component {
   }
 
   componentDidMount () {
-    if (this.refs.main) {
-      this.refs.main.addEventListener('mousewheel', this.onMousewheel)
-      this.refs.main.addEventListener('DOMMouseScroll', this.onMousewheel)
+    const rootEl = document.getElementById('root')
+    if (rootEl) {
+      rootEl.addEventListener('mousewheel', this.onMousewheel)
+      rootEl.addEventListener('DOMMouseScroll', this.onMousewheel)
     }
     // window.setTimeout(() => {
     //   this.props.setPage(1)
@@ -20,9 +21,10 @@ class Main extends Component {
   }
 
   componentWillUnmount () {
-    if (this.refs.main) {
-      this.refs.main.removeEventListener('mousewheel', this.onMousewheel)
-      this.refs.main.removeEventListener('DOMMouseScroll', this.onMousewheel)
+    const rootEl = document.getElementById('root')
+    if (rootEl) {
+      rootEl.removeEventListener('mousewheel', this.onMousewheel)
+      rootEl.removeEventListener('DOMMouseScroll', this.onMousewheel)
     }
   }
 

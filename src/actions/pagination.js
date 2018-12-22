@@ -17,7 +17,7 @@ const setPage = (page) => {
         type: 'TOGGLE_PAGINATION_CHANGING',
         payload: false
       })
-    }, 1000)
+    }, 1500)
   }
 }
 
