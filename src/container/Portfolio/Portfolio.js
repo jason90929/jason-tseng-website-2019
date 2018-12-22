@@ -1,18 +1,32 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import Btn from '../../components/Btn/Btn'
-import Icon from '../../components/Icon/Icon'
-import vrViewerImage from '../../assets/images/portfolio/iStaging-VR-Viewer.png'
-import './portfolio.scss'
 import FullCenter from '../../components/FullCenter/FullCenter'
+import Icon from '../../components/Icon/Icon'
 import Stroke from '../../components/Effects/Stroke'
+import './portfolio.scss'
 
 class Portfolio extends Component {
+  static defaultProps = {
+    text: '',
+    title: '',
+    image: '',
+    color: ''
+  }
+
+  static propTypes = {
+    text: PropTypes.string,
+    title: PropTypes.string,
+    image: PropTypes.string,
+    color: PropTypes.string
+  }
+
   render () {
     return (
       <FullCenter className="portfolio">
         <div className="portfolio-content">
-          <p className="portfolio-content-text">iStaging</p>
-          <h1 className="portfolio-content-title">VR Viewer</h1>
+          <p className="portfolio-content-text">{this.props.text}</p>
+          <h1 className="portfolio-content-title">{this.props.title}</h1>
           <div className="portfolio-btn-position">
             <Btn className="btn-no-default">
               <Stroke className="portfolio-btn-stroke-padding">
@@ -21,14 +35,17 @@ class Portfolio extends Component {
             </Btn>
           </div>
         </div>
-        <div className="portfolio-color-block"></div>
+        <div
+          className="portfolio-color-block"
+          style={{ backgroundColor: this.props.color }}>
+        </div>
         <figure className="portfolio-figure">
           <Icon
             className="portfolio-image"
             height="100%"
             width="100%"
             style={{ backgroundSize: 'cover' }}
-            image={vrViewerImage}>
+            image={this.props.image}>
           </Icon>
         </figure>
       </FullCenter>

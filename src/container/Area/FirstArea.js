@@ -13,7 +13,7 @@ class FirstArea extends Component {
           It's nice to see you here.
         </h1>
         <p className="first-area-text">
-          I make a good project structure and pixel perfect developing.
+          I make a good project structure and smooth website developing.
         </p>
         <div className="scroll-down-position">
           <DoubleColorHoverText
