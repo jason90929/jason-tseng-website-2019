@@ -9,7 +9,7 @@ class Aside extends Component {
     return (
       <aside className="aside">
         <div className="scroll-position">
-          <a
+          <a // eslint-disable-line
             role="button"
             onClick={this.props.toPortfolio}>
             <DoubleColorHoverText
