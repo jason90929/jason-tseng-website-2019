@@ -20,6 +20,21 @@
   font-size: 6em;
 }
 
+.portfolio-pad-white {
+  display: inline;
+  background-image: linear-gradient(to bottom, rgba(white, .3) 0%, rgba(white, .3) 100%);
+  background-size: 0 82%;
+  background-repeat: no-repeat;
+  background-position: 0 80%;
+  overflow: hidden;
+  transition: background-size .8s linear, box-shadow .5s ease-out .8s;
+  padding-right: 0.1em;
+
+  &.portfolio-pad-white-active {
+    background-size: 100% 82%;
+  }
+}
+
 .portfolio-btn-position {
   margin: 5.6em 2.1em;
 }

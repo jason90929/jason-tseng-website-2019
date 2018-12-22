@@ -26,7 +26,11 @@ class Portfolio extends Component {
       <FullCenter className="portfolio">
         <div className="portfolio-content">
           <p className="portfolio-content-text">{this.props.text}</p>
-          <h1 className="portfolio-content-title">{this.props.title}</h1>
+          <h1 className="portfolio-content-title">
+            <div className="portfolio-pad-white portfolio-pad-white-active">
+              {this.props.title}
+            </div>
+          </h1>
           <div className="portfolio-btn-position">
             <Btn className="btn-no-default">
               <Stroke className="portfolio-btn-stroke-padding">
