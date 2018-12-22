@@ -60,6 +60,7 @@ $main-li-height: 80px;
   transform: translateX(-100%);
   -webkit-transition: transform $menu-hover-color1-spd $menu-hover-color2-timing $menu-hover-color2-delay-spd;
   transition: transform $menu-hover-color1-spd $menu-hover-color2-timing $menu-hover-color2-delay-spd;
+  pointer-events: none;
 
   .loader-text-inner {
     position: absolute;
@@ -86,6 +87,7 @@ $main-li-height: 80px;
   transform: translateX(-100%);
   -webkit-transition: transform $menu-hover-color2-spd $menu-hover-color1-timing;
   transition: transform $menu-hover-color2-spd $menu-hover-color1-timing;
+  pointer-events: none;
 
   .loader-text-inner {
     position: absolute;
