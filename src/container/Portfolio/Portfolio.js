@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Btn from '../../components/Btn/Btn'
+// import Btn from '../../components/Btn/Btn'
 import Icon from '../../components/Icon/Icon'
-import Stroke from '../../components/Effects/Stroke'
+// import Stroke from '../../components/Effects/Stroke'
 import './portfolio.scss'
 
 class Portfolio extends Component {
@@ -30,13 +30,13 @@ class Portfolio extends Component {
               {this.props.title}
             </div>
           </h1>
-          <div className="portfolio-btn-position">
-            <Btn className="btn-no-default">
-              <Stroke className="portfolio-btn-stroke-padding">
-                <p className="portfolio-btn-text">SEE SHOWCASE</p>
-              </Stroke>
-            </Btn>
-          </div>
+          {/*<div className="portfolio-btn-position">*/}
+            {/*<Btn className="btn-no-default">*/}
+              {/*<Stroke className="portfolio-btn-stroke-padding">*/}
+                {/*<p className="portfolio-btn-text">SEE SHOWCASE</p>*/}
+              {/*</Stroke>*/}
+            {/*</Btn>*/}
+          {/*</div>*/}
         </div>
         <div
           className="portfolio-color-block"
