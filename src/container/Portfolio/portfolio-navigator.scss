@@ -1,0 +1,47 @@
+.portfolio-navigator {
+  position: fixed;
+  top: 35%;
+  right: 1.6em;
+  font-size: 1.8em;
+  font-weight: bold;
+  width: 1.6em;
+  height: 2.4em;
+}
+
+$size: 1.4em;
+.current-count-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $size;
+  height: $size;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.current-count {
+  width: $size;
+  height: $size;
+}
+
+.divider {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 0.1125em;
+    height: 1.4em;
+    background-color: #000000;
+    transform: translate(-50%, -50%) rotateZ(45deg);
+  }
+}
+
+.portfolio-count {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
