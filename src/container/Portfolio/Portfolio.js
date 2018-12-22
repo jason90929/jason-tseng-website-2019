@@ -23,7 +23,7 @@ class Portfolio extends Component {
 
   render () {
     return (
-      <FullCenter className="portfolio">
+      <div className="portfolio">
         <div className="portfolio-content">
           <p className="portfolio-content-text">{this.props.text}</p>
           <h1 className="portfolio-content-title">
@@ -46,13 +46,11 @@ class Portfolio extends Component {
         <figure className="portfolio-figure">
           <Icon
             className="portfolio-image"
-            height="100%"
-            width="100%"
             style={{ backgroundSize: 'cover' }}
             image={this.props.image}>
           </Icon>
         </figure>
-      </FullCenter>
+      </div>
     )
   }
 }

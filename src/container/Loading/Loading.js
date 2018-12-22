@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import connect from 'react-redux/es/connect/connect'
 import loading from '../../actions/loading'
-import Background from '../Background/Background'
-import FullCenter from '../../components/FullCenter/FullCenter'
 import Logo from '../Logo'
 import './loading.scss'
 

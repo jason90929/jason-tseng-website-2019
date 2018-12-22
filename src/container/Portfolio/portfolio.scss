@@ -1,6 +1,7 @@
 .portfolio {
   position: relative;
   display: flex;
+  width: 100%;
 }
 
 .portfolio-content {
@@ -52,6 +53,7 @@
   display: flex;
   margin-left: auto;
   width: 60%;
+  height: 100%;
 }
 
 .portfolio-image {

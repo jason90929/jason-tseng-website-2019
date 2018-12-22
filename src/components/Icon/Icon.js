@@ -21,8 +21,8 @@ class Icon extends Component {
   static defaultProps = {
     image: '',
     className: '',
-    width: '20px',
-    height: '20px',
+    width: '',
+    height: '',
     style: {},
     hasLazyload: false
   }
