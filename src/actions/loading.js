@@ -10,4 +10,4 @@ const increment = () => {
 
 export default {
   increment
-};
+}

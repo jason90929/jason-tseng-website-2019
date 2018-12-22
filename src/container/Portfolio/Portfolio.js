@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Btn from '../../components/Btn/Btn'
-import FullCenter from '../../components/FullCenter/FullCenter'
 import Icon from '../../components/Icon/Icon'
 import Stroke from '../../components/Effects/Stroke'
 import './portfolio.scss'

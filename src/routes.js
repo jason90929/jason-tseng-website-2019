@@ -6,11 +6,11 @@ import {
 } from 'react-router-dom';
 import Home from './pages/Home/Home'
 import AppComponent from './container/AppComponent'
-import Header from './container/Header/Header'
-import Footer from './container/Footer'
-import Loading from './container/Loading/Loading'
 import Aside from './container/Aside/Aside'
-import './routes.scss'
+import Footer from './container/Footer'
+import Header from './container/Header/Header'
+import Loading from './container/Loading/Loading'
+import Main from './container/Main/Main'
 
 const routes = (
   <Router>
@@ -18,9 +18,9 @@ const routes = (
       <Loading />
       <Header />
       <Aside/>
-      <main className="main">
+      <Main className="main">
         <Route exact path="/" component={Home} />
-      </main>
+      </Main>
       <Footer />
     </AppComponent>
   </Router>
