@@ -29,6 +29,22 @@
   }
 }
 
+.logo-j-rotate-effect {
+  animation: letter-rotate 1.2s infinite;
+
+  @keyframes letter-rotate {
+    0% {
+      transform: rotateZ(0);
+    }
+    50% {
+      transform: rotateZ(10deg);
+    }
+    100% {
+      transform: rotateZ(0);
+    }
+  }
+}
+
 $color: #ffba1a;
 .animation-pulse-shadow,
 %animation-pulse-shadow {

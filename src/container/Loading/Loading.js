@@ -8,15 +8,17 @@ import cx from 'classnames'
 
 class Loading extends Component {
   componentDidMount () {
-    // window.setTimeout(() => {
-    //   this.props.increment()
-    // }, 2000)
+    window.setTimeout(() => {
+      this.props.increment()
+    }, 2000)
   }
 
   render () {
     const className = cx('logo-position', {
       'logo-position-to-corner': this.props.isLoadingComplete
     })
+    const logoBgClass = !this.props.isLoadingComplete && 'logo-pulse-effect'
+    const logoJClass = !this.props.isLoadingComplete && 'logo-j-rotate-effect'
     const homePage = this.props.pageList.findIndex(page => page === 'home')
     return (
       <a // eslint-disable-line
@@ -24,7 +26,8 @@ class Loading extends Component {
         role="button"
         onClick={() => { this.props.setPage(homePage) }}>
         <Logo
-          logoBgClass="logo-pulse-effect">
+          logoBgClass={logoBgClass}
+          logoJClass={logoJClass}>
         </Logo>
       </a>
     )

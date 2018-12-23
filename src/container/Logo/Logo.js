@@ -7,11 +7,13 @@ import './logo.scss'
 
 class Logo extends Component {
   static defaultProps = {
-    logoBgClass: ''
+    logoBgClass: '',
+    logoJClass: ''
   }
 
   static propTypes = {
-    logoBgClass: PropTypes.string
+    logoBgClass: PropTypes.string,
+    logoJClass: PropTypes.string
   }
 
   render () {
@@ -24,6 +26,7 @@ class Logo extends Component {
           image={logoBg}>
         </Icon>
         <Icon
+          className={this.props.logoJClass}
           height="36px"
           width="36px"
           image={logoJ}>
