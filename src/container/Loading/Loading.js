@@ -17,8 +17,8 @@ class Loading extends Component {
     const className = cx('logo-position', {
       'logo-position-to-corner': this.props.isLoadingComplete
     })
-    const logoBgClass = !this.props.isLoadingComplete && 'logo-pulse-effect'
-    const logoJClass = !this.props.isLoadingComplete && 'logo-j-rotate-effect'
+    const logoBgClass = this.props.isLoadingComplete ? '' : 'logo-pulse-effect'
+    const logoJClass = this.props.isLoadingComplete ? '' : 'logo-j-rotate-effect'
     const homePage = this.props.pageList.findIndex(page => page === 'home')
     return (
       <a // eslint-disable-line
@@ -27,7 +27,8 @@ class Loading extends Component {
         onClick={() => { this.props.setPage(homePage) }}>
         <Logo
           logoBgClass={logoBgClass}
-          logoJClass={logoJClass}>
+          logoJClass={logoJClass}
+          size="144px">
         </Logo>
       </a>
     )

@@ -8,12 +8,14 @@ import './logo.scss'
 class Logo extends Component {
   static defaultProps = {
     logoBgClass: '',
-    logoJClass: ''
+    logoJClass: '',
+    size: '36px'
   }
 
   static propTypes = {
     logoBgClass: PropTypes.string,
-    logoJClass: PropTypes.string
+    logoJClass: PropTypes.string,
+    size: PropTypes.string
   }
 
   render () {
@@ -21,14 +23,14 @@ class Logo extends Component {
       <div className="logo">
         <Icon
           className={this.props.logoBgClass}
-          height="36px"
-          width="36px"
+          height={this.props.size}
+          width={this.props.size}
           image={logoBg}>
         </Icon>
         <Icon
           className={this.props.logoJClass}
-          height="36px"
-          width="36px"
+          height={this.props.size}
+          width={this.props.size}
           image={logoJ}>
         </Icon>
       </div>

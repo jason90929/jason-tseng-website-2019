@@ -1,17 +1,21 @@
 import React, { Component } from 'react'
 import connect from 'react-redux/es/connect/connect'
+import cx from 'classnames'
 import pagination from '../../actions/pagination'
 import MenuItem from './MenuItem'
 import './menu.scss'
 
 class Menu extends Component {
   render () {
+    const className = cx('menu', {
+      'menu-loaded': this.props.isLoadingComplete
+    })
     const aboutMePage = this.props.pageList.findIndex(page => page === 'about')
     const portfolioPage = this.props.pageList.findIndex(page => page === 'portfolio')
     const contactPage = this.props.pageList.findIndex(page => page === 'contact')
     return (
       <div className="menu-position">
-        <ul className="menu">
+        <ul className={className}>
           <MenuItem
             text="About"
             onClick={() => this.props.setPage(aboutMePage)}
@@ -32,6 +36,7 @@ class Menu extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
+    isLoadingComplete: state.loading.isLoadingComplete,
     pageList: state.pagination.pageList
   }
 }

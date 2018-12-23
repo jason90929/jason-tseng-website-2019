@@ -1,13 +1,34 @@
-.menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-}
-
 .menu-position {
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+$bounce-timing-function: cubic-bezier(0, 1, .25, 1);
+$bounce-duration: .5s;
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+
+  // TODO: change it with better transition
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(.85);
+  transition: opacity $bounce-duration $bounce-timing-function,
+  visibility 0s $bounce-timing-function $bounce-duration,
+  transform $bounce-duration $bounce-timing-function;
+  pointer-events: none;
+
+  &.menu-loaded {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    transition: opacity $bounce-duration $bounce-timing-function,
+    transform $bounce-duration $bounce-timing-function;
+    pointer-events: auto;
+  }
 }
