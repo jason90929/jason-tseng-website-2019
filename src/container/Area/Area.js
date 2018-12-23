@@ -17,7 +17,8 @@ class Area extends Component {
 
   render () {
     const className = cx('area', {
-      [this.props.className]: this.props.className
+      [this.props.className]: this.props.className,
+      'area-loaded': this.props.isLoadingComplete
     })
     return (
       <FullCenter className="loading">

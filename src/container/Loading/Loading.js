@@ -2,26 +2,31 @@ import React, { Component } from 'react'
 import connect from 'react-redux/es/connect/connect'
 import loading from '../../actions/loading'
 import pagination from '../../actions/pagination'
-import Logo from '../Logo'
+import Logo from '../Logo/Logo'
 import './loading.scss'
+import cx from 'classnames'
 
 class Loading extends Component {
   componentDidMount () {
-    window.setTimeout(() => {
-      this.props.increment()
-    }, 2000)
+    // window.setTimeout(() => {
+    //   this.props.increment()
+    // }, 2000)
   }
 
   render () {
+    const className = cx('logo-position', {
+      'logo-position-to-corner': this.props.isLoadingComplete
+    })
     const homePage = this.props.pageList.findIndex(page => page === 'home')
     return (
-      <div className="logo-position">
-        <a // eslint-disable-line
-          role="button"
-          onClick={() => { this.props.setPage(homePage) }}>
-          <Logo />
-        </a>
-      </div>
+      <a // eslint-disable-line
+        className={className}
+        role="button"
+        onClick={() => { this.props.setPage(homePage) }}>
+        <Logo
+          logoBgClass="logo-pulse-effect">
+        </Logo>
+      </a>
     )
   }
 }
