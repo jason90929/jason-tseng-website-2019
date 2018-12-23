@@ -35,8 +35,8 @@ class ThirdArea extends Component {
         key="ThirdArea3"
         className="third-area">
         <Portfolio
-          text="NongDesign"
-          title="NongDesign"
+          text="Nong Design"
+          title="Nong Design"
           image={nongDesignImage}
           color="#ffe500">
         </Portfolio>
@@ -45,7 +45,7 @@ class ThirdArea extends Component {
         key="ThirdArea4"
         className="third-area">
         <Portfolio
-          text="NongDesign"
+          text="Nong Design"
           title="CNEWS"
           image={cnewsImage}
           color="#21D8DA">
@@ -55,7 +55,7 @@ class ThirdArea extends Component {
         key="ThirdArea5"
         className="third-area">
         <Portfolio
-          text="NongDesign"
+          text="Nong Design"
           title="Home Integration"
           image={homeIntegrationImage}
           color="#acacac">
