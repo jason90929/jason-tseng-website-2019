@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Area from './Area'
-import Portfolio from '../Portfolio/Portfolio'
+import Area from '../../container/Area/Area'
+import Portfolio from '../../container/Portfolio/Portfolio'
 import './third-area.scss'
 import tourRingImage from '../../assets/images/portfolio/iStaging-TourRing.png'
 import threeDDollHouseImage from '../../assets/images/portfolio/iStaging-3DDollHouse.png'

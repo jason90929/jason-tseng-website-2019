@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Area from './Area'
+import Area from '../../container/Area/Area'
 import './first-area.scss'
 
 class FirstArea extends Component {

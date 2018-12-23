@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import FirstArea from '../../container/Area/FirstArea'
-import SecondArea from '../../container/Area/SecondArea'
-import ThirdArea from '../../container/Area/ThirdArea'
-import FourthArea from '../../container/Area/FourthArea'
+import FirstArea from './FirstArea'
+import SecondArea from './SecondArea'
+import ThirdArea from './ThirdArea'
+import FourthArea from './FourthArea'
 
 class App extends Component {
   render () {
