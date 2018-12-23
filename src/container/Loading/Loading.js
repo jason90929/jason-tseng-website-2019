@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import connect from 'react-redux/es/connect/connect'
 import loading from '../../actions/loading'
+import pagination from '../../actions/pagination'
 import Logo from '../Logo'
 import './loading.scss'
 
@@ -12,9 +13,14 @@ class Loading extends Component {
   }
 
   render () {
+    const homePage = this.props.pageList.findIndex(page => page === 'home')
     return (
       <div className="logo-position">
-        <Logo />
+        <a // eslint-disable-line
+          role="button"
+          onClick={() => { this.props.setPage(homePage) }}>
+          <Logo />
+        </a>
       </div>
     )
   }
@@ -23,14 +29,16 @@ class Loading extends Component {
 const mapStateToProps = (state, ownProps) => {
   return {
     currentLoading: state.loading.currentLoading,
+    isLoadingComplete: state.loading.isLoadingComplete,
     maxLoading: state.loading.maxLoading,
-    isLoadingComplete: state.loading.isLoadingComplete
+    pageList: state.pagination.pageList
   };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    increment: () => dispatch(loading.increment())
+    increment: () => dispatch(loading.increment()),
+    setPage: (page) => dispatch(pagination.setPage(page))
   };
 };
 
