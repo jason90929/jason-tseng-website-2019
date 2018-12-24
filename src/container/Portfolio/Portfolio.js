@@ -35,7 +35,7 @@ class Portfolio extends Component {
     const textClass = cx('portfolio-content-text', {
       [this.props.textClass]: this.props.textClass
     })
-    const titleClass = cx('portfolio-pad-white portfolio-pad-white-active', {
+    const titleClass = cx({
       [this.props.titleClass]: this.props.titleClass
     })
     const btnClass = cx('btn-no-default', {
@@ -51,8 +51,8 @@ class Portfolio extends Component {
       <div className="portfolio">
         <div className="portfolio-content">
           <p className={textClass}>{this.props.text}</p>
-          <div className="portfolio-content-title">
-            <h1 className={titleClass}>
+          <div className={titleClass}>
+            <h1 className="portfolio-content-title portfolio-pad-white portfolio-pad-white-active">
               {this.props.title}
             </h1>
           </div>

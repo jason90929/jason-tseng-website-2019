@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import connect from 'react-redux/es/connect/connect'
 import cx from 'classnames'
 import Area from '../../container/Area/Area'
+import Email from '../../container/Email'
 import './fourth-area.scss'
 
 class FourthArea extends Component {
@@ -16,9 +17,7 @@ class FourthArea extends Component {
           Contact
         </h2>
         <p className="fourth-area-frame-2">
-          <a href="mailto:tsaistorm@gmail.com">
-            tsaistorm@gmail.com
-          </a>
+          <Email />
         </p>
       </Area>
     )
