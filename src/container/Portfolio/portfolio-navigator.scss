@@ -7,11 +7,14 @@
   width: 1.6em;
   height: 2.4em;
   z-index: 1;
-  transition: transform .5s ease .9s;
+  transition-property: transform;
+  transition-duration: .5s;
+  transition-timing-function: ease;
   transform: translateX(200%);
 
   &.portfolio-navigator-active {
     transform: none;
+    transition-delay: 2.6s;
   }
 }
 
