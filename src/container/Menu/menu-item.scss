@@ -3,8 +3,30 @@
   display: flex;
   overflow: hidden;
 
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: .6em;
+    width: 100%;
+    background-color: #ffba1a;
+    transform: translateX(100%);
+    transition-property: transform;
+    transition-duration: .4s;
+    transition-timing-function: ease;
+  }
+
   + .menu-item {
     margin-top: 1.2em;
+  }
+
+  &.menu-item-active {
+    &::before {
+      transform: none;
+      transition-delay: .9s;
+    }
   }
 }
 
