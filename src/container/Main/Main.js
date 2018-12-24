@@ -33,6 +33,14 @@ class Main extends Component {
     if (this.props.isPaginationChanging) {
       return
     }
+
+    const els = document.querySelectorAll('.area')
+    const currentAreaEl = els[this.props.currentPage]
+    var hasHorizontalScrollbar = currentAreaEl.scrollHeight > currentAreaEl.clientHeight
+    if (hasHorizontalScrollbar) {
+      return
+    }
+
     // firefox使用detail:下3上-3,其他瀏覽器使用wheelDelta:下-120上120
     const page = (event.wheelDelta ? event.wheelDelta : -event.detail) >= 0 ? -1 : 1
     // 下滾

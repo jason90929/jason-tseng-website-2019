@@ -1,13 +1,14 @@
 .second-area {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .article {
   position: relative;
   width: 100%;
+  margin: auto;
   display: flex;
   justify-content: center;
 
