@@ -16,27 +16,42 @@ class ThirdArea extends Component {
       text: 'iStaging',
       title: 'TourRing',
       image: tourRingImage,
-      color: '#BBEA86'
+      color: '#BBEA86',
+      onClick: () => {
+        window.open('https://tourring.istaging.com/57ecd104816dfa005668e914')
+      }
     }, {
       text: 'iStaging',
       title: '3D DollHouse',
       image: threeDDollHouseImage,
-      color: '#dac9ff'
+      color: '#dac9ff',
+      onClick: () => {
+        window.open('http://3d-dollhouse.avosapps.us/scene/62cb3510-6708-4f62-94c3-f9936db7e20b')
+      }
     }, {
       text: 'Nong Design',
       title: 'Nong Design',
       image: nongDesignImage,
-      color: '#ffe500'
+      color: '#ffe500',
+      onClick: () => {
+        window.open('https://nongdesign.site/')
+      }
     }, {
       text: 'Nong Design',
       title: 'CNEWS',
       image: cnewsImage,
-      color: '#21D8DA'
+      color: '#21D8DA',
+      onClick: () => {
+        window.open('https://cnews.com.tw/')
+      }
     }, {
       text: 'Nong Design',
       title: 'Home Integration',
       image: homeIntegrationImage,
-      color: '#acacac'
+      color: '#acacac',
+      onClick: () => {
+        window.open('http://home-i.com.tw/')
+      }
     }]
   }
 
@@ -56,6 +71,7 @@ class ThirdArea extends Component {
             title={portfolio.title}
             image={portfolio.image}
             color={portfolio.color}
+            onClick={portfolio.onClick}
             textClass="third-area-frame-text"
             titleClass="third-area-frame-title"
             btnClass="third-area-frame-btn"

@@ -12,6 +12,7 @@ class Portfolio extends Component {
     title: '',
     image: '',
     color: '',
+    onClick: '',
     textClass: '',
     titleClass: '',
     btnClass: '',
@@ -24,6 +25,7 @@ class Portfolio extends Component {
     title: PropTypes.string,
     image: PropTypes.string,
     color: PropTypes.string,
+    onClick: PropTypes.func,
     textClass: PropTypes.string,
     titleClass: PropTypes.string,
     btnClass: PropTypes.string,
@@ -57,7 +59,9 @@ class Portfolio extends Component {
             </h1>
           </div>
           <div className="portfolio-btn-position">
-            <Btn className={btnClass}>
+            <Btn
+              className={btnClass}
+              onClick={this.props.onClick}>
               <Stroke className="portfolio-btn-stroke-padding">
                 <p className="portfolio-btn-text">SEE SHOWCASE</p>
               </Stroke>
