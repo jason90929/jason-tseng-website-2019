@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
 import Area from '../../container/Area/Area'
+import cx from 'classnames'
 import './first-area.scss'
+import connect from 'react-redux/es/connect/connect'
 
 class FirstArea extends Component {
   render () {
+    const className = cx('first-area', {
+      'area-loaded': this.props.isLoaded && this.props.pageList[this.props.currentPage] === 'home'
+    })
     return (
-      <Area className="first-area">
+      <Area className={className}>
         <h1 className="first-area-title first-area-frame-1">
           Hello.
           <br />
@@ -19,4 +24,14 @@ class FirstArea extends Component {
   }
 }
 
-export default FirstArea
+const mapStateToProps = (state, ownProps) => {
+  return {
+    currentPage: state.pagination.currentPage,
+    isLoaded: state.loading.isLoaded,
+    pageList: state.pagination.pageList
+  };
+};
+
+export default connect(
+  mapStateToProps
+)(FirstArea)
