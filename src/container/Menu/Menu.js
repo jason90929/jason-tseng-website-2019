@@ -16,11 +16,6 @@ class Menu extends Component {
     const pageAbout = this.props.pageList[this.props.currentPage] === 'about'
     const pagePortfolio = this.props.pageList[this.props.currentPage] === 'portfolio'
     const pageContact = this.props.pageList[this.props.currentPage] === 'contact'
-    console.log('pageAbout\n' +
-      'pagePortfolio\n' +
-      'pageContact', pageAbout,
-    pagePortfolio,
-    pageContact)
     return (
       <div className="menu-position">
         <ul className={className}>
