@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import { isMobile } from '../../resources/utility'
 import './double-color-hover-text.scss'
 
 class DoubleColorHoverText extends Component {
@@ -16,7 +17,8 @@ class DoubleColorHoverText extends Component {
 
   render () {
     const className = cx('loader-wrapper', {
-      [this.props.className]: this.props.className
+      [this.props.className]: this.props.className,
+      'hoverable': isMobile
     })
     return (
       <div className={className}>

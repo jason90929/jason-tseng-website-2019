@@ -7,16 +7,23 @@
 
 .menu {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: flex-end;
   pointer-events: none;
 
+  @media (min-width: 768px) {
+    flex-direction: column;
+  }
+
   > .menu-item {
-    transform: translateX(100%) translateX(1.625em);
+    transform: translateY(-100%) translateY(-1.625em);
     transition-property: transform;
     transition-duration: .7s;
     transition-timing-function: ease;
+
+    @media (min-width: 768px) {
+      transform: translateX(100%) translateX(1.625em);
+    }
 
     &::after {
       content: '';

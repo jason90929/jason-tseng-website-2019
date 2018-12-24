@@ -29,11 +29,17 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  margin-top: auto;
+  margin-bottom: 3em;
   padding: .75em;
   transition-property: transform;
   transition-duration: .7s;
   transition-timing-function: ease;
   transform-origin: right center;
+
+  @media (min-width: 768px) {
+    margin: 0;
+  }
 
   &.next-page-last,
   &.next-page-changing {
@@ -46,11 +52,24 @@
 
   .next-page-text {
     text-align: center;
-    font-size: 1em;
+    font-size: .75em;
+
+    @media (min-width: 768px) {
+      font-size: 1em;
+    }
   }
 
   .next-page-icon {
+    width: 51px;
+    height: 10px;
+    background-size: 51px 10px;
     animation: icon-move 2.2s infinite;
+
+    @media (min-width: 768px) {
+      width: 102px;
+      height: 20px;
+      background-size: 102px 20px;
+    }
 
     @keyframes icon-move {
       0% {

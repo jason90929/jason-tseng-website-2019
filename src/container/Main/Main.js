@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { isMobile } from '../../resources/utility'
 import connect from 'react-redux/es/connect/connect'
 import pagination from '../../actions/pagination'
 import './main.scss'
@@ -11,7 +12,7 @@ class Main extends Component {
 
   componentDidMount () {
     const rootEl = document.getElementById('root')
-    if (rootEl) {
+    if (rootEl && isMobile) {
       rootEl.addEventListener('mousewheel', this.onMousewheel)
       rootEl.addEventListener('DOMMouseScroll', this.onMousewheel)
     }
@@ -22,7 +23,7 @@ class Main extends Component {
 
   componentWillUnmount () {
     const rootEl = document.getElementById('root')
-    if (rootEl) {
+    if (rootEl && isMobile) {
       rootEl.removeEventListener('mousewheel', this.onMousewheel)
       rootEl.removeEventListener('DOMMouseScroll', this.onMousewheel)
     }

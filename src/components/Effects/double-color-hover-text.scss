@@ -13,32 +13,34 @@ $main-li-height: 80px;
   font-size: 2em;
   font-weight: bold;
 
-  &:hover {
-    // 顏色１遮罩進入
-    .loader-text-outer {
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
-      -webkit-transition: $menu-hover-color1-spd $menu-hover-color1-timing;
-      transition: $menu-hover-color1-spd $menu-hover-color1-timing;
-    }
-
-    .loader-text-inner {
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
-      -webkit-transition: $menu-hover-color1-spd $menu-hover-color1-timing;
-      transition: $menu-hover-color1-spd $menu-hover-color1-timing;
-    }
-
-    // 顏色２遮罩進入
-    .loader-text-outer-second {
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
-      -webkit-transition: transform $menu-hover-color2-spd $menu-hover-color2-timing $menu-hover-color2-delay-spd;
-      transition: transform $menu-hover-color2-spd $menu-hover-color2-timing $menu-hover-color2-delay-spd;
+  .hoverable {
+    &:hover {
+      // 顏色１遮罩進入
+      .loader-text-outer {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-transition: $menu-hover-color1-spd $menu-hover-color1-timing;
+        transition: $menu-hover-color1-spd $menu-hover-color1-timing;
+      }
 
       .loader-text-inner {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-transition: $menu-hover-color1-spd $menu-hover-color1-timing;
+        transition: $menu-hover-color1-spd $menu-hover-color1-timing;
+      }
+
+      // 顏色２遮罩進入
+      .loader-text-outer-second {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
         -webkit-transition: transform $menu-hover-color2-spd $menu-hover-color2-timing $menu-hover-color2-delay-spd;
         transition: transform $menu-hover-color2-spd $menu-hover-color2-timing $menu-hover-color2-delay-spd;
+
+        .loader-text-inner {
+          -webkit-transition: transform $menu-hover-color2-spd $menu-hover-color2-timing $menu-hover-color2-delay-spd;
+          transition: transform $menu-hover-color2-spd $menu-hover-color2-timing $menu-hover-color2-delay-spd;
+        }
       }
     }
   }

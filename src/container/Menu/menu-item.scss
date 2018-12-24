@@ -19,7 +19,12 @@
   }
 
   + .menu-item {
-    margin-top: .9em;
+    margin-left: .4em;
+
+    @media (min-width: 768px) {
+      margin-left: 0;
+      margin-top: .9em;
+    }
   }
 
   &.menu-item-active {
@@ -31,7 +36,11 @@
 }
 
 .menu-text {
-  font-size: 1.1em;
-  letter-spacing: .0875em;
   color: #303030;
+  font-size: 1em;
+
+  @media (min-width: 768px) {
+    font-size: 1.1em;
+    letter-spacing: .0875em;
+  }
 }

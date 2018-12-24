@@ -1,11 +1,11 @@
 .portfolio-navigator {
   position: absolute;
-  bottom: 1em;
-  right: 1.6em;
-  font-size: 1.8em;
+  bottom: .5em;
+  right: .8em;
+  font-size: 1.1em;
   font-weight: bold;
   width: 1.6em;
-  height: 2.4em;
+  height: 2em;
   z-index: 1;
   transition-property: transform;
   transition-duration: .5s;
@@ -15,6 +15,14 @@
   &.portfolio-navigator-active {
     transform: none;
     transition-delay: 2.6s;
+  }
+
+  @media (min-width: 768px) {
+    bottom: 1em;
+    right: 1.6em;
+    font-size: 1.8em;
+    width: 1.6em;
+    height: 2.4em;
   }
 }
 

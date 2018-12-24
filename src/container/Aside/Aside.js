@@ -27,8 +27,6 @@ class Aside extends Component {
           <span className="next-page-text">Next</span>
           <Icon
             className="next-page-icon"
-            width="102px"
-            height="20px"
             image={nextImage}
           />
         </a>
