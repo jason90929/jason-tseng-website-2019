@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import connect from 'react-redux/es/connect/connect'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import FullCenter from '../../components/FullCenter/FullCenter'
 import Background from '../Background/Background'
+import FullCenter from '../../components/FullCenter/FullCenter'
 import './area.scss'
 
 class Area extends Component {
@@ -13,6 +13,32 @@ class Area extends Component {
 
   static propTypes = {
     className: PropTypes.string
+  }
+  
+  constructor () {
+    super()
+    this.onScroll = this.onScroll.bind(this)
+  }
+
+  componentDidMount () {
+    const areaEl = this.refs.area
+    if (areaEl) {
+      areaEl.addEventListener('scroll', this.onScroll)
+    }
+    // window.setTimeout(() => {
+    //   this.props.setPage(1)
+    // }, 3000)
+  }
+
+  componentWillUnmount () {
+    const areaEl = this.refs.area
+    if (areaEl) {
+      areaEl.removeEventListener('scroll', this.onScroll)
+    }
+  }
+
+  onScroll (event) {
+    // on scrolling...
   }
 
   render () {
@@ -25,7 +51,9 @@ class Area extends Component {
           lineActive={this.props.isLoaded}
           key="Background"
         />
-        <section className={className}>
+        <section
+          ref="area"  
+          className={className}>
           {this.props.children}
         </section>
       </FullCenter>
