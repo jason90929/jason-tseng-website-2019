@@ -18,7 +18,7 @@ class Area extends Component {
   render () {
     const className = cx('area', {
       [this.props.className]: this.props.className,
-      'area-loaded': this.props.isLoaded
+      'area-loaded': this.props.isLoaded && this.props.pageList[this.props.currentPage] === 'home'
     })
     return (
       <FullCenter className="loading">
@@ -35,7 +35,9 @@ class Area extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    isLoaded: state.loading.isLoaded
+    currentPage: state.pagination.currentPage,
+    isLoaded: state.loading.isLoaded,
+    pageList: state.pagination.pageList
   };
 };
 
