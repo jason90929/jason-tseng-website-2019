@@ -17,7 +17,7 @@ const routes = (
     <AppComponent>
       <Loading />
       <Header />
-      <Aside/>
+      <Aside />
       <Main className="main">
         <Route exact path="/" component={Home} />
       </Main>

@@ -27,8 +27,8 @@ const mapStateToProps = (state, ownProps) => {
     currentPage: state.pagination.currentPage,
     isLoaded: state.loading.isLoaded,
     pageList: state.pagination.pageList
-  };
-};
+  }
+}
 
 export default connect(
   mapStateToProps

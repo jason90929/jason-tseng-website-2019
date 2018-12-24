@@ -24,7 +24,9 @@ class Loading extends Component {
       <a // eslint-disable-line
         className={className}
         role="button"
-        onClick={() => { this.props.setPage(homePage) }}>
+        onClick={() => {
+          this.props.setPage(homePage)
+        }}>
         <Logo
           logoBgClass={logoBgClass}
           logoJClass={logoJClass}
@@ -41,15 +43,15 @@ const mapStateToProps = (state, ownProps) => {
     isLoaded: state.loading.isLoaded,
     maxLoading: state.loading.maxLoading,
     pageList: state.pagination.pageList
-  };
-};
+  }
+}
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     increment: () => dispatch(loading.increment()),
     setPage: (page) => dispatch(pagination.setPage(page))
-  };
-};
+  }
+}
 
 export default connect(
   mapStateToProps,

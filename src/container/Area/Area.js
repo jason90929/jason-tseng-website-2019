@@ -17,13 +17,14 @@ class Area extends Component {
 
   render () {
     const className = cx('area', {
-      [this.props.className]: this.props.className,
+      [this.props.className]: this.props.className
     })
     return (
       <FullCenter className="loading">
         <Background
           lineActive={this.props.isLoaded}
-          key="Background" />
+          key="Background"
+        />
         <section className={className}>
           {this.props.children}
         </section>
@@ -37,8 +38,8 @@ const mapStateToProps = (state, ownProps) => {
     currentPage: state.pagination.currentPage,
     isLoaded: state.loading.isLoaded,
     pageList: state.pagination.pageList
-  };
-};
+  }
+}
 
 export default connect(
   mapStateToProps
