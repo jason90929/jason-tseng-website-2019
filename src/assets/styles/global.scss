@@ -6,6 +6,7 @@ html, body, #root {
   height: 100%;
   overflow: hidden;
   -moz-osx-font-smoothing: grayscale;
+  color: #303030;
 }
 
 * {
@@ -25,4 +26,12 @@ li {
 
 a, button {
   cursor: pointer;
+}
+
+a {
+  color: #777;
+
+  &:hover {
+    color: #303030;
+  }
 }

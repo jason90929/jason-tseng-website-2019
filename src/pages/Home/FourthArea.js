@@ -15,6 +15,11 @@ class FourthArea extends Component {
         <h2 className="fourth-area-frame-1">
           Contact
         </h2>
+        <p className="fourth-area-frame-2">
+          <a href="mailto:tsaistorm@gmail.com">
+            tsaistorm@gmail.com
+          </a>
+        </p>
       </Area>
     )
   }

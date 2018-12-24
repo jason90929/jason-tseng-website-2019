@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import './double-color-hover-text.scss'
 import cx from 'classnames'
+import './double-color-hover-text.scss'
 
 class DoubleColorHoverText extends Component {
   static defaultProps = {
