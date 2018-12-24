@@ -11,12 +11,13 @@ class Portfolio extends Component {
     text: '',
     title: '',
     image: '',
+    video: '',
     color: '',
     onClick: '',
     textClass: '',
     titleClass: '',
     btnClass: '',
-    imageClass: '',
+    previewClass: '',
     colorClass: ''
   }
 
@@ -24,12 +25,13 @@ class Portfolio extends Component {
     text: PropTypes.string,
     title: PropTypes.string,
     image: PropTypes.string,
+    video: PropTypes.string,
     color: PropTypes.string,
     onClick: PropTypes.func,
     textClass: PropTypes.string,
     titleClass: PropTypes.string,
     btnClass: PropTypes.string,
-    imageClass: PropTypes.string,
+    previewClass: PropTypes.string,
     colorClass: PropTypes.string
   }
 
@@ -43,8 +45,8 @@ class Portfolio extends Component {
     const btnClass = cx('btn-no-default', {
       [this.props.btnClass]: this.props.btnClass
     })
-    const imageClass = cx('portfolio-image', {
-      [this.props.imageClass]: this.props.imageClass
+    const previewClass = cx('portfolio-figure', {
+      [this.props.previewClass]: this.props.previewClass
     })
     const colorClass = cx('portfolio-color-block', {
       [this.props.colorClass]: this.props.colorClass
@@ -72,12 +74,26 @@ class Portfolio extends Component {
           className={colorClass}
           style={{ backgroundColor: this.props.color }}>
         </div>
-        <figure className="portfolio-figure">
-          <Icon
-            className={imageClass}
-            style={{ backgroundSize: 'cover' }}
-            image={this.props.image}>
-          </Icon>
+        <figure className={previewClass}>
+          {
+            this.props.image ?
+            <Icon
+              className="portfolio-image"
+              style={{ backgroundSize: 'cover' }}
+              image={this.props.image}>
+            </Icon> : null
+          }
+          {
+            this.props.video ?
+            <video
+              ref="video"
+              className="portfolio-video"
+              src={this.props.video}
+              autoPlay={true}
+              loop={true}
+              muted={true}>
+            </video> : null
+          }
         </figure>
       </div>
     )

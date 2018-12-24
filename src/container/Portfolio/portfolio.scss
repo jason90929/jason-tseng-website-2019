@@ -70,23 +70,37 @@
 }
 
 .portfolio-figure {
+  position: relative;
   display: flex;
   margin-top: 5em;
   margin-left: auto;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 
   @media (min-width: 768px) {
     margin-top: 0;
     width: 60%;
   }
+
+  &::after {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
 }
 
 .portfolio-image {
   position: relative;
-  padding-bottom: 100%;
   width: 100%;
-  height: 0;
+}
+
+.portfolio-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  transform: translate(-50%, -50%);
 }
 
 .portfolio-color-block {

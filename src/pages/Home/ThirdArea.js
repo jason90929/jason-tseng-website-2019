@@ -3,11 +3,11 @@ import connect from 'react-redux/es/connect/connect'
 import cx from 'classnames'
 import Area from '../../container/Area/Area'
 import Portfolio from '../../container/Portfolio/Portfolio'
-import tourRingImage from '../../assets/images/portfolio/iStaging-TourRing.png'
-import threeDDollHouseImage from '../../assets/images/portfolio/iStaging-3DDollHouse.png'
-import nongDesignImage from '../../assets/images/portfolio/NongDesign.png'
-import cnewsImage from '../../assets/images/portfolio/CNEWS.png'
-import homeIntegrationImage from '../../assets/images/portfolio/Home-Integration.png'
+import tourRingVideo from  '../../assets/video/tourring-preview-720.mp4'
+import threeDDollHouseVideo from  '../../assets/video/3ddollhouse-preview-720.mp4'
+import nongDesignVideo from  '../../assets/video/nong-design-preview-720.mp4'
+import homeIntegrationVideo from  '../../assets/video/home-i-preview-720.mp4'
+import cnewsVideo from  '../../assets/video/cnews-preview-720.mp4'
 import './third-area.scss'
 
 class ThirdArea extends Component {
@@ -15,7 +15,7 @@ class ThirdArea extends Component {
     portfolio: [{
       text: 'iStaging',
       title: 'TourRing',
-      image: tourRingImage,
+      video: tourRingVideo,
       color: '#BBEA86',
       onClick: () => {
         window.open('https://tourring.istaging.com/57ecd104816dfa005668e914')
@@ -23,7 +23,7 @@ class ThirdArea extends Component {
     }, {
       text: 'iStaging',
       title: '3D DollHouse',
-      image: threeDDollHouseImage,
+      video: threeDDollHouseVideo,
       color: '#dac9ff',
       onClick: () => {
         window.open('http://3d-dollhouse.avosapps.us/scene/62cb3510-6708-4f62-94c3-f9936db7e20b')
@@ -31,7 +31,7 @@ class ThirdArea extends Component {
     }, {
       text: 'Nong Design',
       title: 'Nong Design',
-      image: nongDesignImage,
+      video: nongDesignVideo,
       color: '#ffe500',
       onClick: () => {
         window.open('https://nongdesign.site/')
@@ -39,7 +39,7 @@ class ThirdArea extends Component {
     }, {
       text: 'Nong Design',
       title: 'CNEWS',
-      image: cnewsImage,
+      video: cnewsVideo,
       color: '#21D8DA',
       onClick: () => {
         window.open('https://cnews.com.tw/')
@@ -47,7 +47,7 @@ class ThirdArea extends Component {
     }, {
       text: 'Nong Design',
       title: 'Home Integration',
-      image: homeIntegrationImage,
+      video: homeIntegrationVideo,
       color: '#acacac',
       onClick: () => {
         window.open('http://home-i.com.tw/')
@@ -70,12 +70,13 @@ class ThirdArea extends Component {
             text={portfolio.text}
             title={portfolio.title}
             image={portfolio.image}
+            video={portfolio.video}
             color={portfolio.color}
             onClick={portfolio.onClick}
             textClass="third-area-frame-text"
             titleClass="third-area-frame-title"
             btnClass="third-area-frame-btn"
-            imageClass="third-area-frame-image"
+            previewClass="third-area-frame-preview"
             colorClass="third-area-frame-color">
           </Portfolio>
         </Area>

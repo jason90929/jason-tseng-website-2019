@@ -8,7 +8,7 @@
 .third-area-frame-text,
 .third-area-frame-title,
 .third-area-frame-btn,
-.third-area-frame-image,
+.third-area-frame-preview,
 .third-area-frame-color {
   opacity: 0;
   transform: translateX(1.5em);
@@ -21,29 +21,29 @@
   .third-area-frame-text,
   .third-area-frame-title,
   .third-area-frame-btn,
-  .third-area-frame-image,
+  .third-area-frame-preview,
   .third-area-frame-color {
     opacity: 1;
     transform: none;
   }
 
-  .third-area-frame-text {
+  .third-area-frame-preview {
     transition-delay: .6s;
   }
 
-  .third-area-frame-title {
+  .third-area-frame-color {
     transition-delay: 1s;
   }
 
-  .third-area-frame-btn {
+  .third-area-frame-text {
     transition-delay: 1.4s;
   }
 
-  .third-area-frame-image {
+  .third-area-frame-title {
     transition-delay: 1.8s;
   }
 
-  .third-area-frame-color {
+  .third-area-frame-btn {
     transition-delay: 2.2s;
   }
 }
