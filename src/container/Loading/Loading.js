@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import connect from 'react-redux/es/connect/connect'
+import cx from 'classnames'
 import loading from '../../actions/loading'
 import pagination from '../../actions/pagination'
 import Logo from '../Logo/Logo'
 import './loading.scss'
-import cx from 'classnames'
 
 class Loading extends Component {
   componentDidMount () {

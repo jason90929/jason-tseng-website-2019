@@ -9,17 +9,18 @@
   position: relative;
   width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
 
-  .article-left {
-    width: 50%;
-    margin-right: auto;
-  }
+  @media (min-width: 768px) {
+    .article-left {
+      width: 50%;
+      margin-right: auto;
+    }
 
-  .article-right {
-    width: 50%;
-    margin-left: auto;
+    .article-right {
+      width: 50%;
+      margin-left: auto;
+    }
   }
 
   a, p {
