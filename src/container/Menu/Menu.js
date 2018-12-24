@@ -8,7 +8,7 @@ import './menu.scss'
 class Menu extends Component {
   render () {
     const className = cx('menu', {
-      'menu-loaded': this.props.isLoadingComplete
+      'menu-loaded': this.props.isLoaded
     })
     const aboutMePage = this.props.pageList.findIndex(page => page === 'about')
     const portfolioPage = this.props.pageList.findIndex(page => page === 'portfolio')
@@ -36,7 +36,7 @@ class Menu extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    isLoadingComplete: state.loading.isLoadingComplete,
+    isLoaded: state.loading.isLoaded,
     pageList: state.pagination.pageList
   }
 }

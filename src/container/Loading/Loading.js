@@ -15,10 +15,10 @@ class Loading extends Component {
 
   render () {
     const className = cx('logo-position', {
-      'logo-position-to-corner': this.props.isLoadingComplete
+      'logo-position-to-corner': this.props.isLoaded
     })
-    const logoBgClass = this.props.isLoadingComplete ? '' : 'logo-pulse-effect'
-    const logoJClass = this.props.isLoadingComplete ? '' : 'logo-j-rotate-effect'
+    const logoBgClass = this.props.isLoaded ? '' : 'logo-pulse-effect'
+    const logoJClass = this.props.isLoaded ? '' : 'logo-j-rotate-effect'
     const homePage = this.props.pageList.findIndex(page => page === 'home')
     return (
       <a // eslint-disable-line
@@ -38,7 +38,7 @@ class Loading extends Component {
 const mapStateToProps = (state, ownProps) => {
   return {
     currentLoading: state.loading.currentLoading,
-    isLoadingComplete: state.loading.isLoadingComplete,
+    isLoaded: state.loading.isLoaded,
     maxLoading: state.loading.maxLoading,
     pageList: state.pagination.pageList
   };

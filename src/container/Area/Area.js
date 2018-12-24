@@ -18,12 +18,12 @@ class Area extends Component {
   render () {
     const className = cx('area', {
       [this.props.className]: this.props.className,
-      'area-loaded': this.props.isLoadingComplete
+      'area-loaded': this.props.isLoaded
     })
     return (
       <FullCenter className="loading">
         <Background
-          lineActive={this.props.isLoadingComplete}
+          lineActive={this.props.isLoaded}
           key="Background" />
         <section className={className}>
           {this.props.children}
@@ -35,7 +35,7 @@ class Area extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    isLoadingComplete: state.loading.isLoadingComplete
+    isLoaded: state.loading.isLoaded
   };
 };
 

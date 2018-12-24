@@ -3,7 +3,7 @@ import { updateObject } from '../resources/utility'
 const initialState = {
   currentLoading: 0,
   maxLoading: 1,
-  isLoadingComplete: false
+  isLoaded: false
 }
 
 const loadingReducer = (state = initialState, action) => {
@@ -12,9 +12,9 @@ const loadingReducer = (state = initialState, action) => {
       return updateObject(state, {
         currentLoading: state.currentLoading + 1
       })
-    case 'LOADING_COMPLETE':
+    case 'LOADED':
       return updateObject(state, {
-        isLoadingComplete: true
+        isLoaded: true
       })
     default:
       return state
