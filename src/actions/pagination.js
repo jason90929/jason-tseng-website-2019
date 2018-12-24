@@ -1,7 +1,9 @@
 const setPage = (page) => {
   return (dispatch, getState) => {
     if (page > getState().pagination.maxPage ||
-      page < 0) {
+      page === getState().pagination.currentPage ||
+      page < 0 ||
+      getState().pagination.isPaginationChanging) {
       return
     }
     dispatch({
