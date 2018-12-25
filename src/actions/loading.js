@@ -8,6 +8,13 @@ const increment = () => {
   }
 }
 
+const setMaxLoading = (number) => {
+  return (dispatch, getState) => {
+    dispatch({ type: 'SET_MAX_LOADING', payload: number })
+  }
+}
+
 export default {
-  increment
+  increment,
+  setMaxLoading
 }

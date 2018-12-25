@@ -9,13 +9,15 @@ import AppComponent from './container/AppComponent'
 import Aside from './container/Aside/Aside'
 import Footer from './container/Footer/Footer'
 import Header from './container/Header/Header'
-import Loading from './container/Loading/Loading'
+import Loading from './container/Loading'
+import LogoLink from './container/Logo/LogoLink'
 import Main from './container/Main/Main'
 
 const routes = (
   <Router>
     <AppComponent>
       <Loading />
+      <LogoLink />
       <Header />
       <Aside />
       <Main className="main">

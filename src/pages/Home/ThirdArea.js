@@ -3,6 +3,11 @@ import connect from 'react-redux/es/connect/connect'
 import cx from 'classnames'
 import Area from '../../container/Area/Area'
 import Portfolio from '../../container/Portfolio/Portfolio'
+import tourRingImage from '../../assets/images/portfolio/iStaging-TourRing.png'
+import threeDDollHouseImage from '../../assets/images/portfolio/iStaging-3DDollHouse.png'
+import nongDesignImage from '../../assets/images/portfolio/NongDesign.png'
+import cnewsImage from '../../assets/images/portfolio/CNEWS.png'
+import homeIntegrationImage from '../../assets/images/portfolio/Home-Integration.png'
 import tourRingVideo from  '../../assets/video/tourring-preview-720.mp4'
 import threeDDollHouseVideo from  '../../assets/video/3ddollhouse-preview-720.mp4'
 import nongDesignVideo from  '../../assets/video/nong-design-preview-720.mp4'
@@ -15,6 +20,7 @@ class ThirdArea extends Component {
     portfolio: [{
       text: 'iStaging',
       title: 'TourRing',
+      image: tourRingImage,
       video: tourRingVideo,
       color: '#BBEA86',
       onClick: () => {
@@ -23,6 +29,7 @@ class ThirdArea extends Component {
     }, {
       text: 'iStaging',
       title: '3D DollHouse',
+      image: threeDDollHouseImage,
       video: threeDDollHouseVideo,
       color: '#dac9ff',
       onClick: () => {
@@ -31,6 +38,7 @@ class ThirdArea extends Component {
     }, {
       text: 'Nong Design',
       title: 'Nong Design',
+      image: nongDesignImage,
       video: nongDesignVideo,
       color: '#ffe500',
       onClick: () => {
@@ -39,6 +47,7 @@ class ThirdArea extends Component {
     }, {
       text: 'Nong Design',
       title: 'CNEWS',
+      image: cnewsImage,
       video: cnewsVideo,
       color: '#21D8DA',
       onClick: () => {
@@ -47,6 +56,7 @@ class ThirdArea extends Component {
     }, {
       text: 'Nong Design',
       title: 'Home Integration',
+      image: homeIntegrationImage,
       video: homeIntegrationVideo,
       color: '#acacac',
       onClick: () => {

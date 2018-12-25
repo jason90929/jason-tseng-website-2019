@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { isMobile } from '../../resources/utility'
+import cx from 'classnames'
 import Btn from '../../components/Btn/Btn'
 import Icon from '../../components/Icon/Icon'
 import Stroke from '../../components/Effects/Stroke'
 import './portfolio.scss'
-import cx from 'classnames'
 
 class Portfolio extends Component {
   static defaultProps = {
@@ -84,11 +85,12 @@ class Portfolio extends Component {
             </Icon> : null
           }
           {
-            this.props.video ?
+            this.props.video && !isMobile ?
             <video
               ref="video"
               className="portfolio-video"
               src={this.props.video}
+              preload="auto"
               autoPlay={true}
               loop={true}
               muted={true}>

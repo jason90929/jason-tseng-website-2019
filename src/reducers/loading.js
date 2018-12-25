@@ -12,6 +12,10 @@ const loadingReducer = (state = initialState, action) => {
       return updateObject(state, {
         currentLoading: state.currentLoading + 1
       })
+    case 'SET_MAX_LOADING':
+      return updateObject(state, {
+        maxLoading: action.payload
+      })
     case 'LOADED':
       return updateObject(state, {
         isLoaded: true

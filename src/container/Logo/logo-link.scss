@@ -1,4 +1,4 @@
-.logo-position {
+.logo-link {
   position: fixed;
   left: 50%;
   top: 50%;
@@ -12,7 +12,7 @@
     transform: translate(-50%, -50%);
   }
 
-  &.logo-position-to-corner {
+  &.logo-link-to-corner {
     animation: none;
     top: 1.4em;
     left: 1.4em;
@@ -60,7 +60,7 @@ $color: #ffba1a;
       box-shadow: 0 0 0 -1px $color;
     }
     50% {
-      box-shadow: 0 0 5px 10px rgba(255, 255, 255, 0);
+      box-shadow: 0 0 15px 25px rgba(255, 255, 255, 0);
     }
     70% {
       box-shadow: 0 0 0 -1px rgba(255, 255, 255, 0);
