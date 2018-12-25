@@ -8,6 +8,7 @@ $bounce-duration: .5s;
   width: 100%;
   height: calc(100% - 8em);
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
 
   @media (min-width: 768px) {
     height: 100%;

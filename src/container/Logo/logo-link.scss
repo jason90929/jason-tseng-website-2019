@@ -1,5 +1,6 @@
 .logo-link {
   position: fixed;
+  -webkit-backface-visibility: hidden;
   left: 50%;
   top: 50%;
   z-index: 1;
