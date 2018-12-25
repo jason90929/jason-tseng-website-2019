@@ -59,3 +59,9 @@ a {
     color: #303030;
   }
 }
+
+.hide-pc {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}

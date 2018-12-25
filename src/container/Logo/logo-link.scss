@@ -75,7 +75,7 @@ $brush-timing-function: cubic-bezier(.5, .9, .7, 1);
 .load-progress {
   &.load-progress-finished {
     animation-name: clean-water;
-    animation-duration: 1s;
+    animation-duration: .5s;
     animation-direction: normal;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;

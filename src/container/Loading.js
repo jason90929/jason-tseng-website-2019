@@ -1,37 +1,26 @@
 import { Component } from 'react'
 import connect from 'react-redux/es/connect/connect'
 import loading from '../actions/loading'
-import { loadImage } from '../resources/utility'
-import tourRingImage from '../assets/images/portfolio/iStaging-TourRing.png'
-import threeDDollHouseImage from '../assets/images/portfolio/iStaging-3DDollHouse.png'
-import nongDesignImage from '../assets/images/portfolio/NongDesign.png'
-import cnewsImage from '../assets/images/portfolio/CNEWS.png'
-import homeIntegrationImage from '../assets/images/portfolio/Home-Integration.png'
-import tourRingVideo from  '../assets/video/tourring-preview-720.mp4'
-import threeDDollHouseVideo from  '../assets/video/3ddollhouse-preview-720.mp4'
-import nongDesignVideo from  '../assets/video/nong-design-preview-720.mp4'
-import homeIntegrationVideo from  '../assets/video/home-i-preview-720.mp4'
-import cnewsVideo from  '../assets/video/cnews-preview-720.mp4'
+import {
+  loadImage
+} from '../resources/utility'
 
 class Loading extends Component {
-  state = {
-    preloadData: [
-      tourRingImage,
-      threeDDollHouseImage,
-      nongDesignImage,
-      cnewsImage,
-      homeIntegrationImage,
-      tourRingVideo,
-      threeDDollHouseVideo,
-      nongDesignVideo,
-      homeIntegrationVideo,
-      cnewsVideo
-    ]
+  constructor () {
+    super()
+    let context = require.context('../assets/images', true, /\.(png|jpe?g|svg|mp4)$/)
+    const imagePaths = []
+    context.keys().forEach(key => {
+      imagePaths.push(context(key))
+    })
+    this.state = {
+      imagePaths
+    }
   }
 
   componentDidMount () {
-    this.props.setMaxLoading(this.state.preloadData.length)
-    this.state.preloadData.forEach(data => {
+    this.props.setMaxLoading(this.state.imagePaths.length)
+    this.state.imagePaths.forEach(data => {
       loadImage(data, () => {
         this.props.increment()
       })
