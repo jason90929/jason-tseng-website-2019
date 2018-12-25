@@ -33,6 +33,7 @@ class Logo extends Component {
           width={this.props.size}
           image={logoJ}>
         </Icon>
+        {this.props.children}
       </div>
     )
   }

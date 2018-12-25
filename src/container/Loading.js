@@ -33,7 +33,7 @@ class Loading extends Component {
     this.props.setMaxLoading(this.state.preloadData.length)
     this.state.preloadData.forEach(data => {
       loadImage(data, () => {
-        // this.props.increment()
+        this.props.increment()
       })
     })
   }

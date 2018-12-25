@@ -70,3 +70,27 @@ $color: #ffba1a;
     }
   }
 }
+
+$brush-timing-function: cubic-bezier(.5, .9, .7, 1);
+.load-progress {
+  &.load-progress-finished {
+    animation-name: clean-water;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: $brush-timing-function;
+    border-radius: 50%;
+
+    @keyframes clean-water {
+      0% {
+        -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+      }
+      100% {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      }
+    }
+  }
+}
