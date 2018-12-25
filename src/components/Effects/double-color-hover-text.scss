@@ -13,7 +13,7 @@ $main-li-height: 80px;
   font-size: 2em;
   font-weight: bold;
 
-  .hoverable {
+  &.hoverable {
     &:hover {
       // 顏色１遮罩進入
       .loader-text-outer {

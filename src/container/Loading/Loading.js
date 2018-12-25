@@ -1,14 +1,15 @@
 import { Component } from 'react'
 import connect from 'react-redux/es/connect/connect'
-import loading from '../actions/loading'
+import loading from '../../actions/loading'
+
 import {
   loadImage
-} from '../resources/utility'
+} from '../../resources/utility'
 
 class Loading extends Component {
   constructor () {
     super()
-    let context = require.context('../assets/images', true, /\.(png|jpe?g|svg|mp4)$/)
+    let context = require.context('../../assets/images', true, /\.(png|jpe?g|svg|mp4)$/)
     const imagePaths = []
     context.keys().forEach(key => {
       imagePaths.push(context(key))

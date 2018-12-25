@@ -18,7 +18,7 @@ class DoubleColorHoverText extends Component {
   render () {
     const className = cx('loader-wrapper', {
       [this.props.className]: this.props.className,
-      'hoverable': isMobile
+      'hoverable': !isMobile
     })
     return (
       <div className={className}>
