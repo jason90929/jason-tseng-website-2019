@@ -47,7 +47,7 @@ class SecondArea extends Component {
             <Icon
               className="second-area-frame-2"
               width="100%"
-              height="100%"
+              style={{ paddingBottom: '100%' }}
               hasLazyload={true}
               image={avatar}
             />
