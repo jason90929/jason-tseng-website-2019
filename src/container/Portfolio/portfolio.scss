@@ -2,7 +2,8 @@
   position: relative;
   display: flex;
   width: 100%;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .portfolio-content {
