@@ -6,7 +6,6 @@
 }
 
 .third-area-frame-text,
-.third-area-frame-title,
 .third-area-frame-btn,
 .third-area-frame-preview {
   opacity: 0;
@@ -14,6 +13,10 @@
   transition-property: transform, opacity;
   transition-duration: .75s;
   transition-timing-function: ease;
+}
+
+.third-area-frame-title {
+  @extend %brush-effect;
 }
 
 $brush-timing-function: cubic-bezier(.5, .9, .7, 1);
@@ -29,11 +32,14 @@ $brush-timing-function: cubic-bezier(.5, .9, .7, 1);
 
 .area-loaded {
   .third-area-frame-text,
-  .third-area-frame-title,
   .third-area-frame-btn,
   .third-area-frame-preview {
     opacity: 1;
     transform: none;
+  }
+
+  .third-area-frame-title {
+    @extend %brush-effect-active;
   }
 
   .third-area-frame-color {
@@ -68,10 +74,24 @@ $brush-timing-function: cubic-bezier(.5, .9, .7, 1);
   }
 
   .third-area-frame-title {
-    transition-delay: 1.8s;
+    transition-delay: 1.6s;
   }
 
   .third-area-frame-btn {
     transition-delay: 2.2s;
   }
+}
+
+$brush-timing-function: cubic-bezier(.5, .9, .7, 1);
+%brush-effect {
+  -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  transition: -webkit-clip-path .85s $brush-timing-function, clip-path .85s $brush-timing-function;
+  pointer-events: none;
+}
+
+%brush-effect-active {
+  -webkit-clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+  clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+  pointer-events: auto;
 }
