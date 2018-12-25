@@ -65,3 +65,11 @@ a {
     display: none;
   }
 }
+
+::-moz-selection {
+  background-color: #ffd74c;
+}
+
+::selection {
+  background-color: #ffd74c;
+}

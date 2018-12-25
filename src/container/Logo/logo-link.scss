@@ -73,6 +73,9 @@ $color: #ffba1a;
 
 $brush-timing-function: cubic-bezier(.5, .9, .7, 1);
 .load-progress {
+  transition: clip-path .15s ease,
+    -webkit-clip-path .15s ease;
+
   &.load-progress-finished {
     animation-name: clean-water;
     animation-duration: .5s;
