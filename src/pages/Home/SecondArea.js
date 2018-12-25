@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 import connect from 'react-redux/es/connect/connect'
 import cx from 'classnames'
 import Area from '../../container/Area/Area'
-import './second-area.scss'
 import Email from '../../container/Email'
+import Icon from '../../components/Icon/Icon'
+import avatar from '../../assets/images/about/avatar.jpg'
+import './second-area.scss'
 
 class SecondArea extends Component {
   render () {
@@ -18,6 +20,13 @@ class SecondArea extends Component {
             <h1 className="second-area-frame-1">
               About me
             </h1>
+            <Icon
+              width="100%"
+              className="hide-pc"
+              style={{ paddingBottom: '100%' }}
+              hasLazyload={true}
+              image={avatar}
+            />
             <p className="second-area-frame-2">
               My name is Jason Tseng and I have 4 years experience of frontend developer currently based in Taipei, Taiwan.
             </p>
@@ -33,6 +42,14 @@ class SecondArea extends Component {
             <p className="second-area-frame-6">
               I'm always open to all kind of offers - just drop me a line at <Email />
             </p>
+          </div>
+          <div className="article-right">
+            <Icon
+              width="100%"
+              height="100%"
+              hasLazyload={true}
+              image={avatar}
+            />
           </div>
         </article>
       </Area>
