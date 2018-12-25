@@ -22,29 +22,30 @@ class SecondArea extends Component {
             </h1>
             <Icon
               width="100%"
-              className="hide-pc"
+              className="second-area-frame-2 hide-pc"
               style={{ paddingBottom: '100%' }}
               hasLazyload={true}
               image={avatar}
             />
-            <p className="second-area-frame-2">
+            <p className="second-area-frame-3">
               My name is Jason Tseng and I have 4 years experience of frontend developer currently based in Taipei, Taiwan.
             </p>
-            <p className="second-area-frame-3">
+            <p className="second-area-frame-4">
               Currently I'm at iStaging which is developing VR/AR platform, make a perfect user experience for consumer, get income from business
             </p>
-            <p className="second-area-frame-4">
+            <p className="second-area-frame-5">
               I'm a strong with personal developing in frontend position, make a good structure code project.
             </p>
-            <p className="second-area-frame-5">
+            <p className="second-area-frame-6">
               I have a good UX sense on developing projects, and sense of RWD, so I usually recommend UI designer a better UI display.
             </p>
-            <p className="second-area-frame-6">
+            <p className="second-area-frame-7">
               I'm always open to all kind of offers - just drop me a line at <Email />
             </p>
           </div>
           <div className="article-right">
             <Icon
+              className="second-area-frame-2"
               width="100%"
               height="100%"
               hasLazyload={true}

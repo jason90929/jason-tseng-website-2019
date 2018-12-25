@@ -46,7 +46,8 @@
 .second-area-frame-3,
 .second-area-frame-4,
 .second-area-frame-5,
-.second-area-frame-6 {
+.second-area-frame-6,
+.second-area-frame-7 {
   opacity: 0;
   transform: translateX(1.5em);
   transition-property: transform, opacity;
@@ -60,7 +61,8 @@
   .second-area-frame-3,
   .second-area-frame-4,
   .second-area-frame-5,
-  .second-area-frame-6 {
+  .second-area-frame-6,
+  .second-area-frame-7 {
     opacity: 1;
     transform: none;
   }
@@ -87,5 +89,9 @@
 
   .second-area-frame-6 {
     transition-delay: 2.6s;
+  }
+
+  .second-area-frame-7 {
+    transition-delay: 3s;
   }
 }
