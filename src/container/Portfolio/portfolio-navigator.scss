@@ -14,7 +14,7 @@
 
   &.portfolio-navigator-active {
     transform: none;
-    transition-delay: 2.6s;
+    transition-delay: 2.2s;
 
     .divider {
       &::before {
@@ -39,7 +39,7 @@
 
     .current-count-inner,
     .portfolio-count-inner {
-      transition-delay: 3.4s;
+      transition-delay: 3s;
       transform: none;
     }
   }
@@ -92,7 +92,7 @@ $size: 1.4em;
     animation-duration: 1.6s;
     animation-fill-mode: forwards;
     animation-timing-function: ease;
-    animation-delay: 2.6s;
+    animation-delay: 2.2s;
     transform: translate(-50%, -50%) rotateZ(45deg);
   }
 }
@@ -107,7 +107,7 @@ $size: 1.4em;
 .portfolio-count-inner {
   position: relative;
   transition-property: transform;
-  transition-duration: .8s;
+  transition-duration: 1s;
   transition-timing-function: ease;
   transition-delay: 1s;
   transform: translateY(-100%);
@@ -118,7 +118,7 @@ $size: 1.4em;
   position: relative;
   overflow: hidden;
   transition-property: transform;
-  transition-duration: .8s;
+  transition-duration: 1s;
   transition-timing-function: ease;
   transition-delay: 1s;
   transform: translateY(100%);
