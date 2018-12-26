@@ -8,25 +8,36 @@ import logoJOrange from '../../assets/images/logo/j-without-bg-orange.png'
 import './logo-link.scss'
 
 class LogoLink extends PureComponent {
-  render () {
-    const className = cx('logo-link', {
-      'logo-link-to-corner': this.props.isLoaded
-    })
-    const logoBgClass = this.props.isLoaded ? '' : 'logo-pulse-effect'
-    const logoJClass = this.props.isLoaded ? '' : 'logo-j-rotate-effect'
-    const logoJOrangeClass = cx('load-progress logo-j-rotate-effect', {
-      'load-progress-finished': this.props.isLoaded
-    })
+  constructor () {
+    super()
+    this.toHomePage = this.toHomePage.bind(this)
+  }
+
+  toHomePage () {
     const homePage = this.props.pageList.findIndex(page => page === 'home')
-    const progress = (this.props.currentLoading / this.props.maxLoading) * 100
-    const clipPath = this.props.isLoaded ? '' : `polygon(0 100%, 100% 100%, 100% ${100 - progress}%, 0 ${100 - progress}%)`
+    this.props.setPage(homePage)
+  }
+
+  render () {
+    let className = 'logo-link'
+    let logoBgClass = 'logo-pulse-effect'
+    let logoJClass = 'logo-j-rotate-effect'
+    let logoJOrangeClass = 'load-progress logo-j-rotate-effect'
+    let clipPath = ''
+    if (this.props.isLoaded) {
+      className += ' logo-link-to-corner'
+      logoJOrangeClass += ' load-progress-finished'
+      logoBgClass = ''
+      logoJClass = ''
+    } else {
+      const progress = (this.props.currentLoading / this.props.maxLoading) * 100
+      clipPath = `polygon(0 100%, 100% 100%, 100% ${100 - progress}%, 0 ${100 - progress}%)`
+    }
     return (
       <a // eslint-disable-line
         className={className}
         role="button"
-        onClick={() => {
-          this.props.setPage(homePage)
-        }}>
+        onClick={this.toHomePage}>
         <Logo
           logoBgClass={logoBgClass}
           logoJClass={logoJClass}

@@ -8,12 +8,13 @@ import './menu.scss'
 class Menu extends PureComponent {
   constructor () {
     super()
-    this.toAbout = this.toAbout.bind(this)
-    this.toPortfolio = this.toPortfolio.bind(this)
-    this.toContact = this.toContact.bind(this)
     this.state = {
       pageList: []
     }
+
+    this.toAbout = this.toAbout.bind(this)
+    this.toPortfolio = this.toPortfolio.bind(this)
+    this.toContact = this.toContact.bind(this)
   }
 
   componentDidMount () {
