@@ -5,6 +5,7 @@ import cx from 'classnames'
 import Btn from '../../components/Btn/Btn'
 import Icon from '../../components/Icon/Icon'
 import Stroke from '../../components/Effects/Stroke'
+import seeShowcaseImage from '../../assets/images/see-showcase.svg'
 import './portfolio.scss'
 
 class Portfolio extends Component {
@@ -44,7 +45,8 @@ class Portfolio extends Component {
       [this.props.titleClass]: this.props.titleClass
     })
     const btnClass = cx('btn-no-default', {
-      [this.props.btnClass]: this.props.btnClass
+      [this.props.btnClass]: this.props.btnClass,
+      'btn-stroke-hover-effect': !isMobile
     })
     const previewClass = cx('portfolio-figure', {
       [this.props.previewClass]: this.props.previewClass
@@ -67,6 +69,12 @@ class Portfolio extends Component {
               onClick={this.props.onClick}>
               <Stroke className="portfolio-btn-stroke-padding">
                 <p className="portfolio-btn-text">SEE SHOWCASE</p>
+                <Icon
+                  className="showcase-icon"
+                  height="2em"
+                  width="2em"
+                  image={seeShowcaseImage}
+                />
               </Stroke>
             </Btn>
           </div>
