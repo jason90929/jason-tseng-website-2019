@@ -3,6 +3,7 @@ import { isMobile } from '../../resources/utility'
 import connect from 'react-redux/es/connect/connect'
 import pagination from '../../actions/pagination'
 import './main.scss'
+import cx from 'classnames'
 
 class Main extends Component {
   constructor () {
@@ -21,13 +22,15 @@ class Main extends Component {
 
   componentDidMount () {
     const rootEl = document.getElementById('root')
-    if (rootEl && !isMobile) {
-      window.addEventListener('keydown', this.onKeydown)
-      rootEl.addEventListener('mousewheel', this.onMousewheel)
-      rootEl.addEventListener('DOMMouseScroll', this.onMousewheel)
-    } else if (rootEl && isMobile) {
-      rootEl.addEventListener('touchstart', this.onTouchstart)
-      rootEl.addEventListener('touchmove', this.onTouchmove)
+    if (rootEl) {
+      if (!isMobile) {
+        window.addEventListener('keydown', this.onKeydown)
+        rootEl.addEventListener('mousewheel', this.onMousewheel)
+        rootEl.addEventListener('DOMMouseScroll', this.onMousewheel)
+      } else  {
+        rootEl.addEventListener('touchstart', this.onTouchstart)
+        rootEl.addEventListener('touchmove', this.onTouchmove)
+      }
     }
     // window.setTimeout(() => {
     //   this.props.setPage(1)
@@ -36,13 +39,15 @@ class Main extends Component {
 
   componentWillUnmount () {
     const rootEl = document.getElementById('root')
-    if (rootEl && !isMobile) {
-      window.removeEventListener('keydown', this.onKeydown)
-      rootEl.removeEventListener('mousewheel', this.onMousewheel)
-      rootEl.removeEventListener('DOMMouseScroll', this.onMousewheel)
-    } else if (rootEl && isMobile) {
-      rootEl.removeEventListener('touchstart', this.onTouchstart)
-      rootEl.removeEventListener('touchmove', this.onTouchmove)
+    if (rootEl) {
+      if (!isMobile) {
+        window.removeEventListener('keydown', this.onKeydown)
+        rootEl.removeEventListener('mousewheel', this.onMousewheel)
+        rootEl.removeEventListener('DOMMouseScroll', this.onMousewheel)
+      } else {
+        rootEl.removeEventListener('touchstart', this.onTouchstart)
+        rootEl.removeEventListener('touchmove', this.onTouchmove)
+      }
     }
   }
 
@@ -58,6 +63,7 @@ class Main extends Component {
       this.props.setPage(this.props.currentPage + 1)
     }
   }
+
   onMousewheel (event) {
     if (this.props.isPaginationChanging) {
       return
@@ -69,8 +75,7 @@ class Main extends Component {
     if (hasHorizontalScrollbar) {
       return
     }
-
-    // firefox使用detail:下3上-3,其他瀏覽器使用wheelDelta:下-120上120
+    // Firefox 使用 detail：下 3 上 -3，其他瀏覽器使用wheelDelta：下 -120，上 120
     const page = (event.wheelDelta ? event.wheelDelta : -event.detail) >= 0 ? -1 : 1
     // 上滾 : 下滾
     this.props.setPage(this.props.currentPage + page)
@@ -106,11 +111,16 @@ class Main extends Component {
 
   render () {
     const x = this.props.currentPage * -100
+    const className = cx('main', {
+      'main-sliding': this.props.isPaginationChanging
+    })
     return (
       <main
         ref="main"
-        className="main"
-        style={{ transform: `translateX(${x}%)` }}>
+        className={className}
+        style={{
+          transform: `translateX(${x}%)`
+        }}>
         {this.props.children}
       </main>
     )
