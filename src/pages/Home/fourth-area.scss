@@ -2,8 +2,19 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
+
+  @media (min-width: 768px) {
+    justify-content: center;
+  }
+}
+
+.article-left {
+  .about-inner {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .fourth-area-article {
@@ -14,17 +25,17 @@
 
   @media (min-width: 768px) {
     flex-direction: row;
+    height: 50%;
 
     .article-left {
-      margin-left: 0;
       margin-right: auto;
-      width: calc(50% - 4.4em);
+      width: 50%;
     }
 
     .article-right {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       width: 50%;
       margin-left: auto;
     }
@@ -34,7 +45,9 @@
 .fourth-area-frame-1,
 .fourth-area-frame-2,
 .fourth-area-frame-3,
-.fourth-area-frame-4 {
+.fourth-area-frame-4,
+.fourth-area-frame-5,
+.fourth-area-frame-6 {
   opacity: 0;
   transform: translateX(1.5em);
   transition-property: transform, opacity;
@@ -46,7 +59,9 @@
   .fourth-area-frame-1,
   .fourth-area-frame-2,
   .fourth-area-frame-3,
-  .fourth-area-frame-4 {
+  .fourth-area-frame-4,
+  .fourth-area-frame-5,
+  .fourth-area-frame-6 {
     opacity: 1;
     transform: none;
   }
@@ -67,22 +82,30 @@
     transition-delay: 1.8s;
   }
 
+  .fourth-area-frame-5 {
+    transition-delay: 2.2s;
+  }
+
+  .fourth-area-frame-6 {
+    transition-delay: 2.6s;
+  }
+
   .about-color-block {
     &::before {
-      animation-name: color-block-in;
+      animation-name: about-color-block-in;
 
-      @keyframes color-block-in {
+      @keyframes about-color-block-in {
         0% {
-          -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+          -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
         }
         25% {
-          -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 66%, 0 85%);
-          clip-path: polygon(0 100%, 100% 100%, 100% 75%, 0 50%);
+          -webkit-clip-path: polygon(0 33%, 100% 25%, 100% 0, 0 0);
+          clip-path: polygon(0 33%, 100% 25%, 100% 0, 0 0);
         }
         50% {
-          -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 33%, 0 60%);
-          clip-path: polygon(0 100%, 100% 100%, 100% 50%, 0 25%);
+          -webkit-clip-path: polygon(0 66%, 100% 50%, 100% 0, 0 0);
+          clip-path: polygon(0 66%, 100% 50%, 100% 0, 0 0);
         }
         100% {
           -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
@@ -94,19 +117,17 @@
 }
 
 .contact-icon {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   height: 1.4em;
 
-  svg {
-    width: 1.2em;
-    height: 1.2em;
-  }
-
-  span {
+  &, span {
     font-family: 'Helvetica', 'SansSerif';
+    font-weight: bold;
+    color: #030303;
+    text-decoration: none;
   }
 
   > * + * {
@@ -119,13 +140,14 @@ $brush-timing-function: cubic-bezier(.5, .9, .7, 1);
   position: relative;
   display: flex;
   flex-direction: column;
+  height: 100%;
 
   &::before {
     position: absolute;
     content: '';
     width: 100%;
     height: 0;
-    padding-bottom: 100%;
+    padding-top: 100%;
     background-color: #dfebe8;
     z-index: -1;
     animation-duration: .8s;
@@ -140,6 +162,11 @@ $brush-timing-function: cubic-bezier(.5, .9, .7, 1);
 
 .about-inner {
   margin: 1em;
+
+  > h1, h2, h3, h4, h5, h6, p {
+    display: flex;
+    margin-bottom: .4em;
+  }
 
   @media (min-width: 768px) {
     margin: 2.2em;
