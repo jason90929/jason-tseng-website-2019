@@ -1,10 +1,10 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import DoubleColorHoverText from '../../components/Effects/DoubleColorHoverText'
 import './menu-item.scss'
 
-class MenuItem extends PureComponent {
+class MenuItem extends Component {
   static defaultProps = {
     className: '',
     text: '',

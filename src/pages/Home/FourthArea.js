@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import connect from 'react-redux/es/connect/connect'
 import cx from 'classnames'
 import Area from '../../container/Area/Area'
@@ -9,7 +9,7 @@ import githubImage from '../../assets/images/contact/github.svg'
 import linkedinImage from '../../assets/images/contact/linkedin.svg'
 import './fourth-area.scss'
 
-class FourthArea extends PureComponent {
+class FourthArea extends Component {
   render () {
     const className = cx('fourth-area', {
       'area-loaded': this.props.isLoaded && this.props.pageList[this.props.currentPage] === 'contact'

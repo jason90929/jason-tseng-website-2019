@@ -1,9 +1,9 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import './icon.scss'
 
-class Icon extends PureComponent {
+class Icon extends Component {
   state = {
     backgroundImage: undefined,
     dataSrc: undefined

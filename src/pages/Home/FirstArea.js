@@ -1,10 +1,10 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import Area from '../../container/Area/Area'
 import cx from 'classnames'
 import './first-area.scss'
 import connect from 'react-redux/es/connect/connect'
 
-class FirstArea extends PureComponent {
+class FirstArea extends Component {
   render () {
     const className = cx('first-area', {
       'area-loaded': this.props.isLoaded && this.props.pageList[this.props.currentPage] === 'home'

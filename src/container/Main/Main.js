@@ -1,11 +1,11 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import { isMobile } from '../../resources/utility'
 import connect from 'react-redux/es/connect/connect'
+import cx from 'classnames'
 import pagination from '../../actions/pagination'
 import './main.scss'
-import cx from 'classnames'
 
-class Main extends PureComponent {
+class Main extends Component {
   constructor () {
     super()
     this.onKeydown = this.onKeydown.bind(this)
@@ -32,9 +32,6 @@ class Main extends PureComponent {
         rootEl.addEventListener('touchmove', this.onTouchmove)
       }
     }
-    // window.setTimeout(() => {
-    //   this.props.setPage(1)
-    // }, 3000)
   }
 
   componentWillUnmount () {

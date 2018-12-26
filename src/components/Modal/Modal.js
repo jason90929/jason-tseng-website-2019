@@ -1,8 +1,8 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import './modal.scss'
 
-class Modal extends PureComponent {
+class Modal extends Component {
   static defaultProps = {
     closable: false,
     children: null

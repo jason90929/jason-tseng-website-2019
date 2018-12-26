@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import connect from 'react-redux/es/connect/connect'
 import cx from 'classnames'
 import Area from '../../container/Area/Area'
@@ -15,7 +15,7 @@ import homeIntegrationVideo from '../../assets/videos/home-i-preview-720.mp4'
 import cnewsVideo from '../../assets/videos/cnews-preview-720.mp4'
 import './third-area.scss'
 
-class ThirdArea extends PureComponent {
+class ThirdArea extends Component {
   state = {
     portfolio: [{
       text: 'iStaging',

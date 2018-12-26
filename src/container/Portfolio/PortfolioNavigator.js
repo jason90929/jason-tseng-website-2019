@@ -1,15 +1,25 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import connect from 'react-redux/es/connect/connect'
 import cx from 'classnames'
 import './portfolio-navigator.scss'
 
-class PortfolioNavigator extends PureComponent {
-  render () {
+class PortfolioNavigator extends Component {
+  state = {
+    startFrom: 0
+  }
+
+  componentDidMount () {
     const startFrom = this.props.pageList.findIndex(page => page === 'portfolio')
+    this.setState(prevState => ({
+      startFrom
+    }))
+  }
+
+  render () {
     const className = cx('portfolio-navigator', {
       'portfolio-navigator-active': this.props.pageList[this.props.currentPage] === 'portfolio'
     })
-    let translateY = `-${(this.props.currentPage - startFrom) * 1.4}em` // same as $size in scss file
+    let translateY = `-${(this.props.currentPage - this.state.startFrom) * 1.4}em` // same as $size in scss file
     return (
       <div className={className}>
         <div className="current-count-wrapper">

@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import connect from 'react-redux/es/connect/connect'
 import cx from 'classnames'
 import pagination from '../../actions/pagination'
@@ -6,7 +6,7 @@ import Icon from '../../components/Icon/Icon'
 import nextImage from '../../assets/images/next.png'
 import './aside.scss'
 
-class Aside extends PureComponent {
+class Aside extends Component {
   render () {
     const next = () => {
       this.props.setPage(this.props.currentPage + 1)

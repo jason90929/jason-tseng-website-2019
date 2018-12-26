@@ -1,9 +1,9 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import './circle-effect.scss'
 
-class CircleEffect extends PureComponent {
+class CircleEffect extends Component {
   static defaultProps = {
     progress: -1000, // from -1000 to 0
     color: '#22d8da',

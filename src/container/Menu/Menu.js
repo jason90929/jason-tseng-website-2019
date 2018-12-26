@@ -1,11 +1,11 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import connect from 'react-redux/es/connect/connect'
 import cx from 'classnames'
 import pagination from '../../actions/pagination'
 import MenuItem from './MenuItem'
 import './menu.scss'
 
-class Menu extends PureComponent {
+class Menu extends Component {
   constructor () {
     super()
     this.state = {

@@ -1,9 +1,9 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import './background.scss'
 
-class Background extends PureComponent {
+class Background extends Component {
   static defaultProps = {
     lineActive: false
   }

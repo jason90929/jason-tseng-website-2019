@@ -1,9 +1,9 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import './full-center.scss'
 
-class FullCenter extends PureComponent {
+class FullCenter extends Component {
   static defaultProps = {
     className: '',
     direction: 'row' // row, column

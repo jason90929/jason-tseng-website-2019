@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { isMobile } from '../../resources/utility'
 import cx from 'classnames'
@@ -7,7 +7,7 @@ import Icon from '../../components/Icon/Icon'
 import Stroke from '../../components/Effects/Stroke'
 import './portfolio.scss'
 
-class Portfolio extends PureComponent {
+class Portfolio extends Component {
   static defaultProps = {
     text: '',
     title: '',
