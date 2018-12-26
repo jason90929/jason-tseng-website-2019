@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import connect from 'react-redux/es/connect/connect'
 import cx from 'classnames'
 import Area from '../../container/Area/Area'
@@ -7,7 +7,7 @@ import Icon from '../../components/Icon/Icon'
 import avatar from '../../assets/images/about/avatar.jpg'
 import './second-area.scss'
 
-class SecondArea extends Component {
+class SecondArea extends PureComponent {
   render () {
     const className = cx('second-area', {
       'area-loaded': this.props.isLoaded && this.props.pageList[this.props.currentPage] === 'about'

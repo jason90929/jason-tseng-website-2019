@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import connect from 'react-redux/es/connect/connect'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
@@ -6,7 +6,7 @@ import Background from '../Background/Background'
 import FullCenter from '../../components/FullCenter/FullCenter'
 import './area.scss'
 
-class Area extends Component {
+class Area extends PureComponent {
   static defaultProps = {
     className: ''
   }

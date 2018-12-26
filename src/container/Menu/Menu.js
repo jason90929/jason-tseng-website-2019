@@ -1,38 +1,66 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import connect from 'react-redux/es/connect/connect'
 import cx from 'classnames'
 import pagination from '../../actions/pagination'
 import MenuItem from './MenuItem'
 import './menu.scss'
 
-class Menu extends Component {
+class Menu extends PureComponent {
+  constructor () {
+    super()
+    this.toAbout = this.toAbout.bind(this)
+    this.toPortfolio = this.toPortfolio.bind(this)
+    this.toContact = this.toContact.bind(this)
+    this.state = {
+      pageList: []
+    }
+  }
+
+  componentDidMount () {
+    this.setState(prevState => ({
+      pageList: this.props.pageList
+    }))
+  }
+
+  toAbout () {
+    const aboutMePage = this.state.pageList.findIndex(page => page === 'about')
+    this.props.setPage(aboutMePage)
+  }
+
+  toPortfolio () {
+    const portfolioPage = this.state.pageList.findIndex(page => page === 'portfolio')
+    this.props.setPage(portfolioPage)
+  }
+
+  toContact () {
+    const contactPage = this.state.pageList.findIndex(page => page === 'contact')
+    this.props.setPage(contactPage)
+  }
+
   render () {
     const className = cx('menu', {
       'menu-loaded': this.props.isLoaded
     })
-    const aboutMePage = this.props.pageList.findIndex(page => page === 'about')
-    const portfolioPage = this.props.pageList.findIndex(page => page === 'portfolio')
-    const contactPage = this.props.pageList.findIndex(page => page === 'contact')
-    const pageAbout = this.props.pageList[this.props.currentPage] === 'about'
-    const pagePortfolio = this.props.pageList[this.props.currentPage] === 'portfolio'
-    const pageContact = this.props.pageList[this.props.currentPage] === 'contact'
+    const pageAbout = this.state.pageList[this.props.currentPage] === 'about'
+    const pagePortfolio = this.state.pageList[this.props.currentPage] === 'portfolio'
+    const pageContact = this.state.pageList[this.props.currentPage] === 'contact'
     return (
       <div className="menu-position">
         <ul className={className}>
           <MenuItem
             text="About"
             className={pageAbout ? 'menu-item-active' : ''}
-            onClick={() => this.props.setPage(aboutMePage)}
+            onClick={this.toAbout}
           />
           <MenuItem
             text="Portfolio"
             className={pagePortfolio ? 'menu-item-active' : ''}
-            onClick={() => this.props.setPage(portfolioPage)}
+            onClick={this.toPortfolio}
           />
           <MenuItem
             text="Contact"
             className={pageContact ? 'menu-item-active' : ''}
-            onClick={() => this.props.setPage(contactPage)}
+            onClick={this.toContact}
           />
         </ul>
       </div>

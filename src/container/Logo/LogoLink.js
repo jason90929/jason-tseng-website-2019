@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import connect from 'react-redux/es/connect/connect'
 import cx from 'classnames'
 import pagination from '../../actions/pagination'
@@ -7,7 +7,7 @@ import Logo from './Logo'
 import logoJOrange from '../../assets/images/logo/j-without-bg-orange.png'
 import './logo-link.scss'
 
-class LogoLink extends Component {
+class LogoLink extends PureComponent {
   render () {
     const className = cx('logo-link', {
       'logo-link-to-corner': this.props.isLoaded

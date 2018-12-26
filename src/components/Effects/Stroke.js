@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import './stroke.scss'
 
-class Stroke extends Component {
+class Stroke extends PureComponent {
   static defaultProps = {
     className: ''
   }

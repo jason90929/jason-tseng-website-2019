@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import { PureComponent } from 'react'
 import connect from 'react-redux/es/connect/connect'
 import loading from '../../actions/loading'
 
@@ -7,7 +7,7 @@ import {
   loadImage
 } from '../../resources/utility'
 
-class Loading extends Component {
+class Loading extends PureComponent {
   constructor () {
     super()
     let imageContext = require.context('../../assets/images', true, /\.(png|jpe?g|svg)$/)

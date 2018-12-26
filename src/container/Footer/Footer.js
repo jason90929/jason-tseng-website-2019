@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import connect from 'react-redux/es/connect/connect'
 import cx from 'classnames'
 import Email from '../Email'
 import PortfolioNavigator from '../Portfolio/PortfolioNavigator'
 import './footer.scss'
 
-class Footer extends Component {
+class Footer extends PureComponent {
   render () {
     const className = cx('footer', {
       'footer-loaded': this.props.isLoaded

@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 
-class Email extends Component {
+class Email extends PureComponent {
   render () {
     return (
       <a

@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { isMobile } from '../../resources/utility'
 import connect from 'react-redux/es/connect/connect'
 import pagination from '../../actions/pagination'
 import './main.scss'
 import cx from 'classnames'
 
-class Main extends Component {
+class Main extends PureComponent {
   constructor () {
     super()
     this.onKeydown = this.onKeydown.bind(this)

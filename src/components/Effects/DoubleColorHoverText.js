@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { isMobile } from '../../resources/utility'
 import './double-color-hover-text.scss'
 
-class DoubleColorHoverText extends Component {
+class DoubleColorHoverText extends PureComponent {
   static defaultProps = {
     className: '',
     text: 'Hover me.'

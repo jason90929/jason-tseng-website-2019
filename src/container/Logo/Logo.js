@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import Icon from '../../components/Icon/Icon'
 import logoJ from '../../assets/images/logo/j-without-bg.png'
 import logoBg from '../../assets/images/logo/bg.png'
 import './logo.scss'
 
-class Logo extends Component {
+class Logo extends PureComponent {
   static defaultProps = {
     logoBgClass: '',
     logoJClass: '',

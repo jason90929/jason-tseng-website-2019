@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import connect from 'react-redux/es/connect/connect'
 import cx from 'classnames'
 import './portfolio-navigator.scss'
 
-class PortfolioNavigator extends Component {
+class PortfolioNavigator extends PureComponent {
   render () {
     const startFrom = this.props.pageList.findIndex(page => page === 'portfolio')
     const className = cx('portfolio-navigator', {

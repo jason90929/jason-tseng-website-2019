@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-class AppComponent extends React.Component {
+class AppComponent extends React.PureComponent {
   constructor (props, context) {
     super(props, context)
 

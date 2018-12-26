@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import './btn.scss'
 
-class Btn extends Component {
+class Btn extends PureComponent {
   static defaultProps = {
     className: '',
     onClick: () => {},
