@@ -3,25 +3,32 @@ import connect from 'react-redux/es/connect/connect'
 import loading from '../../actions/loading'
 
 import {
+  isMobile,
   loadImage
 } from '../../resources/utility'
 
 class Loading extends Component {
   constructor () {
     super()
-    let context = require.context('../../assets/images', true, /\.(png|jpe?g|svg|mp4)$/)
-    const imagePaths = []
-    context.keys().forEach(key => {
-      imagePaths.push(context(key))
+    let imageContext = require.context('../../assets/images', true, /\.(png|jpe?g|svg)$/)
+    const filePaths = []
+    imageContext.keys().forEach(key => {
+      filePaths.push(imageContext(key))
     })
+    if (!isMobile) {
+      let videoContext = require.context('../../assets/videos', true, /\.mp4$/)
+      videoContext.keys().forEach(key => {
+        filePaths.push(videoContext(key))
+      })
+    }
     this.state = {
-      imagePaths
+      filePaths
     }
   }
 
   componentDidMount () {
-    this.props.setMaxLoading(this.state.imagePaths.length)
-    this.state.imagePaths.forEach(data => {
+    this.props.setMaxLoading(this.state.filePaths.length)
+    this.state.filePaths.forEach(data => {
       loadImage(data, () => {
         this.props.increment()
       })
