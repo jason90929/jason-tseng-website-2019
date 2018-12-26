@@ -16,22 +16,22 @@ class DoubleColorHoverText extends Component {
   }
 
   render () {
-    const className = cx('loader-wrapper', {
+    const className = cx('double-color-hover-text-wrapper', {
       [this.props.className]: this.props.className,
       'hoverable': !isMobile
     })
     return (
       <div className={className}>
-        <p className="loader-text--model">{this.props.text}</p>
-        <div className="loader-text-outer">
-          <p className="loader-text loader-text--sizing">{this.props.text}</p>
-          <div className="loader-text-inner"><p className="loader-text loader-text--mask">{this.props.text}</p>
+        <p className="double-color-hover-text--model">{this.props.text}</p>
+        <div className="double-color-hover-text-outer">
+          <p className="double-color-hover-text double-color-hover-text--sizing">{this.props.text}</p>
+          <div className="double-color-hover-text-inner"><p className="double-color-hover-text double-color-hover-text--mask">{this.props.text}</p>
           </div>
         </div>
-        <div className="loader-text-outer-second">
-          <p className="loader-text loader-text--sizing">{this.props.text}</p>
-          <div className="loader-text-inner">
-            <p className="loader-text loader-text--mask">{this.props.text}</p>
+        <div className="double-color-hover-text-outer-second">
+          <p className="double-color-hover double-color-hover-text--sizing">{this.props.text}</p>
+          <div className="double-color-hover-text-inner">
+            <p className="double-color-hover-text double-color-hover-text--mask">{this.props.text}</p>
           </div>
         </div>
       </div>

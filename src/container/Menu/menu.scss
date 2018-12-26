@@ -15,6 +15,14 @@
     flex-direction: column;
   }
 
+  &:hover {
+    .double-color-hover-text-outer,
+    .double-color-hover-text-inner,
+    .double-color-hover-text-outer-second {
+      will-change: transform;
+    }
+  }
+
   > .menu-item {
     transform: translateY(-100%) translateY(-1.625em);
     transition-property: transform;
