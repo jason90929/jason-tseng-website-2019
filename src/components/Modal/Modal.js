@@ -1,15 +1,18 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
 import './modal.scss'
 
 class Modal extends Component {
   static defaultProps = {
     closable: false,
+    className: '',
     children: null
   }
 
   static propTypes = {
     closable: PropTypes.bool,
+    className: PropTypes.string,
     children: PropTypes.node
   }
 
@@ -41,9 +44,12 @@ class Modal extends Component {
   }
 
   render () {
+    const className = cx('modal', {
+      [this.props.className]: this.props.className
+    })
     return (
       <div
-        className="modal"
+        className={className}
         onClick={this.props.closable ? this.closeModal : null}>
         {this.props.children}
       </div>
