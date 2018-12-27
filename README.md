@@ -1,6 +1,12 @@
+Personal website (2018/12)
+https://jason-tseng.firebaseapp.com/
+https://github.com/jason90929/jason-tseng-website-2019
+* React 16 Website
+
 COBINHOOD public API test (2018/11)
 https://cobinhood-assignment-jason.firebaseapp.com/
-* D3.js Techan to build a candle chart
+https://github.com/jason90929/cobinhood-assignment-jason-tseng
+* A candle chart by D3.js Techan
 * Use Websocket to get latest data
 * Build with Vue.js
 
@@ -107,11 +113,6 @@ https://www.my-wedding.tw/index.php(Online but not finished only by myself)
 * pure JavaScript, CSS and HTML
 
 Others:
-Personal website (this is 2 years ago)
-https://jason90929.github.io/
-* React based static page
-* Github hosted website
-* A-Frame based 3D module
 
 廷廷鋼琴窩團購網 (2016/09~2016/11) in Case job
 https://jason-tseng.com/sample/tin-group/(static)
