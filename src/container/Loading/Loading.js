@@ -1,38 +1,31 @@
 import { Component } from 'react'
+import PropTypes from 'prop-types'
 import connect from 'react-redux/es/connect/connect'
 import loading from '../../actions/loading'
 
 import {
-  isMobile,
   loadImage
 } from '../../resources/utility'
 
 class Loading extends Component {
-  constructor () {
-    super()
-    let imageContext = require.context('../../assets/images', true, /\.(png|jpe?g|svg)$/)
-    const filePaths = []
-    imageContext.keys().forEach(key => {
-      filePaths.push(imageContext(key))
-    })
-    if (!isMobile) {
-      let videoContext = require.context('../../assets/videos', true, /\.mp4$/)
-      videoContext.keys().forEach(key => {
-        filePaths.push(videoContext(key))
-      })
-    }
-    this.state = {
-      filePaths
-    }
+  static defaultProps = {
+    preloadData: []
+  }
+
+  static propTypes = {
+    preloadData: PropTypes.array
   }
 
   componentDidMount () {
-    this.props.setMaxLoading(this.state.filePaths.length)
-    this.state.filePaths.forEach(data => {
-      loadImage(data, () => {
-        this.props.increment()
+    this.props.initLoading()
+    this.props.setMaxLoading(this.props.preloadData.length)
+    window.setTimeout(() => { // Wait animation finish
+      this.props.preloadData.forEach(data => {
+        loadImage(data, () => {
+          this.props.increment()
+        })
       })
-    })
+    }, 1000)
   }
 
   render () {
@@ -42,6 +35,7 @@ class Loading extends Component {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
+    initLoading: () => dispatch(loading.initLoading()),
     increment: () => dispatch(loading.increment()),
     setMaxLoading: (number) => dispatch(loading.setMaxLoading(number))
   }

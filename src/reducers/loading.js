@@ -8,6 +8,11 @@ const initialState = {
 
 const loadingReducer = (state = initialState, action) => {
   switch (action.type) {
+    case 'INIT_LOADING':
+      return updateObject(state, {
+        currentLoading: 0,
+        isLoaded: false
+      })
     case 'INCREMENT':
       return updateObject(state, {
         currentLoading: state.currentLoading + 1

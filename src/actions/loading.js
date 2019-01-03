@@ -1,3 +1,9 @@
+const initLoading = () => {
+  return (dispatch, getState) => {
+    dispatch({ type: 'INIT_LOADING' })
+  }
+}
+
 const increment = () => {
   return (dispatch, getState) => {
     dispatch({ type: 'INCREMENT' })
@@ -15,6 +21,7 @@ const setMaxLoading = (number) => {
 }
 
 export default {
+  initLoading,
   increment,
   setMaxLoading
 }

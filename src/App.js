@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Router, Route } from 'react-router-dom'
 import AppComponent from './container/AppComponent'
-import Loading from './container/Loading/Loading'
 import LogoLink from './container/Logo/LogoLink'
 import Main from './container/Main/Main'
 import Home from './pages/Home/Home'
@@ -13,7 +12,6 @@ class App extends Component {
     return (
       <Router history={this.props.history}>
         <AppComponent>
-          <Loading/>
           <LogoLink/>
           <Main className="main">
             <Route exact path="/" component={Home}/>
