@@ -2,10 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { isMobile } from '../../resources/utility'
 import cx from 'classnames'
-import Btn from '../../components/Btn/Btn'
 import Icon from '../../components/Icon/Icon'
-import Stroke from '../../components/Effects/Stroke'
-import seeShowcaseImage from '../../assets/images/see-showcase.svg'
+import ShowcaseBtn from './ShowcaseBtn'
 import './portfolio.scss'
 
 class Portfolio extends Component {
@@ -44,10 +42,6 @@ class Portfolio extends Component {
     const titleClass = cx({
       [this.props.titleClass]: this.props.titleClass
     })
-    const btnClass = cx('btn-no-default', {
-      [this.props.btnClass]: this.props.btnClass,
-      'btn-stroke-hover-effect': !isMobile
-    })
     const previewClass = cx('portfolio-figure', {
       [this.props.previewClass]: this.props.previewClass
     })
@@ -64,19 +58,10 @@ class Portfolio extends Component {
             </h1>
           </div>
           <div className="portfolio-btn-position">
-            <Btn
-              className={btnClass}
-              onClick={this.props.onClick}>
-              <Stroke className="portfolio-btn-stroke-padding">
-                <p className="portfolio-btn-text">SEE SHOWCASE</p>
-                <Icon
-                  className="showcase-icon"
-                  height="2em"
-                  width="2em"
-                  image={seeShowcaseImage}
-                />
-              </Stroke>
-            </Btn>
+            <ShowcaseBtn
+              className={this.props.btnClass}
+              onClick={this.props.onClick}
+            />
           </div>
         </div>
         <div

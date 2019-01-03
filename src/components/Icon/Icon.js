@@ -4,9 +4,12 @@ import cx from 'classnames'
 import './icon.scss'
 
 class Icon extends Component {
-  state = {
-    backgroundImage: undefined,
-    dataSrc: undefined
+  constructor () {
+    super()
+    this.state = {
+      backgroundImage: undefined,
+      dataSrc: undefined
+    }
   }
 
   static propTypes = {
@@ -42,32 +45,32 @@ class Icon extends Component {
     const { hasLazyload, image } = this.props
     if (hasLazyload) {
       if (!image) {
-        this.setState({
+        this.setState(prevState => ({
           backgroundImage: undefined,
           dataSrc: undefined
-        })
+        }))
         return
       }
-      this.setState({
+      this.setState(prevState => ({
         dataSrc: image
-      })
+      }))
       preloadImage(image, () => {
         // don't use base64 file here or IE will not work
-        this.setState({
+        this.setState(prevState => ({
           backgroundImage: `url('${image}')`,
           dataSrc: undefined
-        })
+        }))
       }, () => {
       }, () => {
-        this.setState({
+        this.setState(prevState => ({
           backgroundImage: undefined,
           dataSrc: undefined
-        })
+        }))
       })
     } else if (image) {
-      this.setState({
+      this.setState(prevState => ({
         backgroundImage: `url('${image}')`
-      })
+      }))
     }
   }
 
@@ -96,8 +99,7 @@ class Icon extends Component {
           height,
           ...this.props.style
         }}
-        data-src={dataSrc}
-      >
+        data-src={dataSrc}>
         {this.props.children}
       </span>
     )
