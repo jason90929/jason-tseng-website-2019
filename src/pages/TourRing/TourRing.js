@@ -41,8 +41,34 @@ class TourRing extends PureComponent {
       <Area
         className={className}
         key="Area">
-        <h1>Tour Ring</h1>
-        <h2>iStaging</h2>
+        <article className="tour-ring-area-article">
+          <h1>TourRing</h1>
+          <h2>iStaging</h2>
+          <p>
+
+          </p>
+          <div className="tour-ring-area-links">
+            <em>Some introduction of TourRing:</em>
+            <a
+              href="https://www.youtube.com/watch?v=DmBkWe-g07A"
+              target="_blank"
+              rel="noopener noreferrer">
+              TourRing 看房篇
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=WfK87CNcvhM"
+              target="_blank"
+              rel="noopener noreferrer">
+              TourRing
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=zbYUZl02rzc"
+              target="_blank"
+              rel="noopener noreferrer">
+              TourRing FR
+            </a>
+          </div>
+        </article>
       </Area>
     ]
   }
