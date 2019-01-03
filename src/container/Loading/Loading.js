@@ -16,16 +16,15 @@ class Loading extends Component {
     preloadData: PropTypes.array
   }
 
-  componentDidMount () {
+  componentWillMount () {
     this.props.initLoading()
     this.props.setMaxLoading(this.props.preloadData.length)
-    window.setTimeout(() => { // Wait animation finish
-      this.props.preloadData.forEach(data => {
-        loadImage(data, () => {
-          this.props.increment()
-        })
+    // 不可延遲啟用否則 hover 任何圖都會狂發 request，原因不明
+    this.props.preloadData.forEach(data => {
+      loadImage(data, () => {
+        this.props.increment()
       })
-    }, 1000)
+    })
   }
 
   render () {
