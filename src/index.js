@@ -1,7 +1,7 @@
 import React from 'react'
 import thunk from 'redux-thunk'
+import history from './history'
 import { AppContainer } from 'react-hot-loader'
-import { createBrowserHistory } from 'history'
 import { applyMiddleware, compose, createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { createLogger } from 'redux-logger'
@@ -21,7 +21,6 @@ if ('serviceWorker' in navigator) {
   })
 }
 
-const history = createBrowserHistory()
 const initialState = {}
 const middleware = []
 if (process.env.NODE_ENV !== 'production') {

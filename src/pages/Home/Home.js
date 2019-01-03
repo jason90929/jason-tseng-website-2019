@@ -3,16 +3,23 @@ import FirstArea from './FirstArea'
 import SecondArea from './SecondArea'
 import ThirdArea from './ThirdArea'
 import FourthArea from './FourthArea'
+import Header from '../../container/Header/Header'
+import Aside from '../../container/Aside/Aside'
+import HorizontalMove from '../../container/HorizontalMove/HorizontalMove'
 
-class App extends PureComponent {
+class Home extends PureComponent {
   render () {
     return [
-      <FirstArea key="FirstArea" />,
-      <SecondArea key="SecondArea" />,
-      <ThirdArea key="ThirdArea" />,
-      <FourthArea key="FourthArea" />
+      <Header key="Header"/>,
+      <Aside key="Aside"/>,
+      <HorizontalMove key="HorizontalMove">
+        <FirstArea/>
+        <SecondArea/>
+        <ThirdArea/>
+        <FourthArea/>
+      </HorizontalMove>
     ]
   }
 }
 
-export default App
+export default Home

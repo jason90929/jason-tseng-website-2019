@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import history from '../../history'
 import connect from 'react-redux/es/connect/connect'
 import pagination from '../../actions/pagination'
 import Icon from '../../components/Icon/Icon'
@@ -15,6 +16,7 @@ class LogoLink extends Component {
   toHomePage () {
     const homePage = this.props.pageList.findIndex(page => page === 'home')
     this.props.setPage(homePage)
+    history.push('/')
   }
 
   render () {

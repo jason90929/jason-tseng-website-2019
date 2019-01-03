@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import connect from 'react-redux/es/connect/connect'
 import cx from 'classnames'
+import history from '../../history'
 import Area from '../../container/Area/Area'
 import Portfolio from '../../container/Portfolio/Portfolio'
 import tourRingImage from '../../assets/images/portfolio/iStaging-TourRing.jpg'
@@ -24,7 +25,7 @@ class ThirdArea extends Component {
       video: tourRingVideo,
       color: '#BBEA86',
       onClick: () => {
-        window.open('https://tourring.istaging.com/57ecd104816dfa005668e914')
+        history.push('/tour-ring')
       }
     }, {
       text: 'iStaging',
