@@ -7,6 +7,13 @@ import Loading from '../../container/Loading/Loading'
 import ImageScroller from '../../container/ImageScroller/ImageScroller'
 import video from '../../assets/videos/tourring-preview-720.mp4'
 import landingPageImage from './img/landing-page.jpg'
+import landingPageMobileImage from './img/landing-page-mobile.jpg'
+import communityImage from './img/community.jpg'
+import communityMobileImage from './img/community-mobile.jpg'
+import lectureRoomImage from './img/lecture-room.jpg'
+import lectureRoomMobileImage from './img/lecture-room-mobile.jpg'
+import virtualTourImage from './img/virtual-tour.jpg'
+import virtualTourMobileImage from './img/virtual-tour-mobile.jpg'
 // import landingPageMobileImage from './img/landing-page-mobile.jpg'
 import './tour-ring.scss'
 
@@ -37,14 +44,11 @@ class TourRing extends PureComponent {
     const className = cx('tour-ring-area', {
       'area-loaded': this.props.isLoaded
     })
-    console.log('this.areaComp', this.areaComp)
-    const scrollTarget = (this.areaComp && this.areaComp.getElement) ? this.areaComp.getElement() : null
     return [
       <Loading
         preloadData={this.state.filePaths}
         key="Loading"/>,
       <Area
-        ref={comp => this.areaComp = comp}
         className={className}
         key="Area">
         <article className="tour-ring-area-article">
@@ -53,8 +57,46 @@ class TourRing extends PureComponent {
         </article>
         <div className="tour-ring-area-scroller">
           <ImageScroller
-            scrollTarget={scrollTarget}
             image={landingPageImage}>
+          </ImageScroller>
+        </div>
+        <div className="tour-ring-area-scroller">
+          <ImageScroller
+            className="image-scroller-mobile"
+            image={landingPageMobileImage}>
+          </ImageScroller>
+        </div>
+        <div className="tour-ring-area-scroller">
+          <ImageScroller
+            image={communityImage}>
+          </ImageScroller>
+        </div>
+        <div className="tour-ring-area-scroller">
+          <ImageScroller
+            className="image-scroller-mobile"
+            image={communityMobileImage}>
+          </ImageScroller>
+        </div>
+        <div className="tour-ring-area-scroller">
+          <ImageScroller
+            image={lectureRoomImage}>
+          </ImageScroller>
+        </div>
+        <div className="tour-ring-area-scroller">
+          <ImageScroller
+            className="image-scroller-mobile"
+            image={lectureRoomMobileImage}>
+          </ImageScroller>
+        </div>
+        <div className="tour-ring-area-scroller">
+          <ImageScroller
+            image={virtualTourImage}>
+          </ImageScroller>
+        </div>
+        <div className="tour-ring-area-scroller">
+          <ImageScroller
+            className="image-scroller-mobile"
+            image={virtualTourMobileImage}>
           </ImageScroller>
         </div>
         <div className="tour-ring-area-links">
