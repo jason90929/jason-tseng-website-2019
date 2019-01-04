@@ -22,8 +22,13 @@
 .tour-ring-area-scroller {
   position: relative;
   width: 100%;
-  margin-top: 25vh;
-  margin-bottom: 25vh;
+  margin-top: 15vh;
+  margin-bottom: 15vh;
+
+  @media (min-width: 768px) {
+    margin-top: 25vh;
+    margin-bottom: 25vh;
+  }
 }
 
 .tour-ring-area-links {

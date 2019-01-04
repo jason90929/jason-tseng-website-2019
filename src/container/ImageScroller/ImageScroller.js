@@ -44,8 +44,9 @@ class ImageScroller extends Component {
     if (this.state.scroller) {
       const rect = this.state.scroller.getBoundingClientRect()
       const elementTop = rect.top
-      const elementHeight = rect.height
-      const positionY = Math.max(0, Math.min(100, (((window.innerHeight / 2) - elementTop) * 100) / elementHeight))
+      let elementHeight = window.getComputedStyle(this.state.scroller).paddingBottom
+      elementHeight = elementHeight.split('px')[0]
+      const positionY = (((window.innerHeight / 2) - elementTop) * 100) / elementHeight
       this.setState(prevState => ({
         positionY
       }))
@@ -55,14 +56,21 @@ class ImageScroller extends Component {
   render () {
     const className = cx('image-scroller', {
       [this.props.className]: this.props.className,
+      'image-scroller-move-out-to-bottom': this.state.positionY <= -50,
+      'image-scroller-move-out-to-top': this.state.positionY >= 150
     })
+    const positionY = Math.max(0, Math.min(100, this.state.positionY))
     return (
-      <div className={className}>
+      <div
+        className={className}
+        ref="scroller">
         <div
-          ref="scroller"
+          className="image-scroller-color-block">
+        </div>
+        <div
           className="image-scroller-bg"
           style={{
-            backgroundPositionY: `${this.state.positionY}%`,
+            backgroundPositionY: `${positionY}%`,
             backgroundImage: `url('${this.props.image}')`
           }}>
         </div>
