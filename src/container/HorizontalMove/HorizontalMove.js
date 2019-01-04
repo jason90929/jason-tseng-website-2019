@@ -108,17 +108,19 @@ class HorizontalMove extends Component {
 
   render () {
     const x = this.props.currentPage * -100
-    const className = cx('horizontal-move', {
-      'horizontal-move-sliding': this.props.isPaginationChanging
+    const className = cx('horizontal-move-inner', {
+      'horizontal-move-inner-sliding': this.props.isPaginationChanging
     })
     return (
-      <section
-        ref="horizontal"
-        className={className}
-        style={{
-          transform: `translateX(${x}%)`
-        }}>
-        {this.props.children}
+      <section className="horizontal-move">
+        <div
+          ref="horizontal"
+          className={className}
+          style={{
+            transform: `translateX(${x}%)`
+          }}>
+          {this.props.children}
+        </div>
       </section>
     )
   }

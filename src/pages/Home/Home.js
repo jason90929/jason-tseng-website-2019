@@ -8,6 +8,7 @@ import Aside from '../../container/Aside/Aside'
 import HorizontalMove from '../../container/HorizontalMove/HorizontalMove'
 import Loading from '../../container/Loading/Loading'
 import { isMobile } from '../../resources/utility'
+import Main from '../../container/Main/Main'
 
 class Home extends PureComponent {
   constructor () {
@@ -42,12 +43,16 @@ class Home extends PureComponent {
         key="Loading"/>,
       <Header key="Header"/>,
       <Aside key="Aside"/>,
-      <HorizontalMove key="HorizontalMove">
-        <FirstArea/>
-        <SecondArea/>
-        <ThirdArea/>
-        <FourthArea/>
-      </HorizontalMove>
+      <Main
+        className="main"
+        key="Main">
+        <HorizontalMove key="HorizontalMove">
+          <FirstArea/>
+          <SecondArea/>
+          <ThirdArea/>
+          <FourthArea/>
+        </HorizontalMove>
+      </Main>
     ]
   }
 }

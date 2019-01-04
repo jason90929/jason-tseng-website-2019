@@ -41,6 +41,10 @@ class Area extends Component {
     // on scrolling...
   }
 
+  getElement () {
+    return this.refs.area
+  }
+
   render () {
     const className = cx('area', {
       [this.props.className]: this.props.className
@@ -52,7 +56,7 @@ class Area extends Component {
           key="Background"
         />
         <section
-          ref="area"  
+          ref="area"
           className={className}>
           {this.props.children}
         </section>

@@ -4,7 +4,10 @@ import connect from 'react-redux/es/connect/connect'
 import { isMobile } from '../../resources/utility'
 import Area from '../../container/Area/Area'
 import Loading from '../../container/Loading/Loading'
+import ImageScroller from '../../container/ImageScroller/ImageScroller'
 import video from '../../assets/videos/tourring-preview-720.mp4'
+import landingPageImage from './img/landing-page.jpg'
+// import landingPageMobileImage from './img/landing-page-mobile.jpg'
 import './tour-ring.scss'
 
 class TourRing extends PureComponent {
@@ -34,41 +37,47 @@ class TourRing extends PureComponent {
     const className = cx('tour-ring-area', {
       'area-loaded': this.props.isLoaded
     })
+    console.log('this.areaComp', this.areaComp)
+    const scrollTarget = (this.areaComp && this.areaComp.getElement) ? this.areaComp.getElement() : null
     return [
       <Loading
         preloadData={this.state.filePaths}
         key="Loading"/>,
       <Area
+        ref={comp => this.areaComp = comp}
         className={className}
         key="Area">
         <article className="tour-ring-area-article">
           <h1>TourRing</h1>
           <h2>iStaging</h2>
-          <p>
-
-          </p>
-          <div className="tour-ring-area-links">
-            <em>Some introduction of TourRing:</em>
-            <a
-              href="https://www.youtube.com/watch?v=DmBkWe-g07A"
-              target="_blank"
-              rel="noopener noreferrer">
-              TourRing 看房篇
-            </a>
-            <a
-              href="https://www.youtube.com/watch?v=WfK87CNcvhM"
-              target="_blank"
-              rel="noopener noreferrer">
-              TourRing
-            </a>
-            <a
-              href="https://www.youtube.com/watch?v=zbYUZl02rzc"
-              target="_blank"
-              rel="noopener noreferrer">
-              TourRing FR
-            </a>
-          </div>
         </article>
+        <div className="tour-ring-area-scroller">
+          <ImageScroller
+            scrollTarget={scrollTarget}
+            image={landingPageImage}>
+          </ImageScroller>
+        </div>
+        <div className="tour-ring-area-links">
+          <em>Some introduction of TourRing:</em>
+          <a
+            href="https://www.youtube.com/watch?v=DmBkWe-g07A"
+            target="_blank"
+            rel="noopener noreferrer">
+            TourRing 看房篇
+          </a>
+          <a
+            href="https://www.youtube.com/watch?v=WfK87CNcvhM"
+            target="_blank"
+            rel="noopener noreferrer">
+            TourRing
+          </a>
+          <a
+            href="https://www.youtube.com/watch?v=zbYUZl02rzc"
+            target="_blank"
+            rel="noopener noreferrer">
+            TourRing FR
+          </a>
+        </div>
       </Area>
     ]
   }
