@@ -4,7 +4,7 @@ import cx from 'classnames'
 import Area from '../../container/Area/Area'
 import Email from '../../container/Email'
 import Icon from '../../components/Icon/Icon'
-import avatar from '../../assets/images/about/avatar.jpg'
+import avatar from '../../assets/images/home/about/avatar.jpg'
 import './second-area.scss'
 
 class SecondArea extends Component {

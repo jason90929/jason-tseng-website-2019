@@ -4,9 +4,9 @@ import cx from 'classnames'
 import Area from '../../container/Area/Area'
 import Email from '../../container/Email'
 import Icon from '../../components/Icon/Icon'
-import codepenImage from '../../assets/images/contact/codepen.svg'
-import githubImage from '../../assets/images/contact/github.svg'
-import linkedinImage from '../../assets/images/contact/linkedin.svg'
+import codepenImage from '../../assets/images/home/contact/codepen.svg'
+import githubImage from '../../assets/images/home/contact/github.svg'
+import linkedinImage from '../../assets/images/home/contact/linkedin.svg'
 import './fourth-area.scss'
 
 class FourthArea extends Component {

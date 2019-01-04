@@ -3,7 +3,7 @@ import connect from 'react-redux/es/connect/connect'
 import cx from 'classnames'
 import pagination from '../../actions/pagination'
 import Icon from '../../components/Icon/Icon'
-import nextImage from '../../assets/images/next.png'
+import nextImage from '../../assets/images/home/next.png'
 import './aside.scss'
 
 class Aside extends Component {

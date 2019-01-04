@@ -15,12 +15,14 @@ class ImageScroller extends Component {
 
   static defaultProps = {
     className: '',
-    image: ''
+    image: '',
+    color: ''
   }
 
   static propTypes = {
     className: PropTypes.string,
-    image: PropTypes.string.isRequired
+    image: PropTypes.string.isRequired,
+    color: PropTypes.string
   }
 
   componentDidMount () {
@@ -65,7 +67,10 @@ class ImageScroller extends Component {
         className={className}
         ref="scroller">
         <div
-          className="image-scroller-color-block">
+          className="image-scroller-color-block"
+          style={{
+            backgroundColor: this.props.color,
+          }}>
         </div>
         <div
           className="image-scroller-bg"

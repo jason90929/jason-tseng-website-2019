@@ -6,14 +6,14 @@ import Area from '../../container/Area/Area'
 import Loading from '../../container/Loading/Loading'
 import ImageScroller from '../../container/ImageScroller/ImageScroller'
 import video from '../../assets/videos/tourring-preview-720.mp4'
-import landingPageImage from './img/landing-page.jpg'
-import landingPageMobileImage from './img/landing-page-mobile.jpg'
-import communityImage from './img/community.jpg'
-import communityMobileImage from './img/community-mobile.jpg'
-import lectureRoomImage from './img/lecture-room.jpg'
-import lectureRoomMobileImage from './img/lecture-room-mobile.jpg'
-import virtualTourImage from './img/virtual-tour.jpg'
-import virtualTourMobileImage from './img/virtual-tour-mobile.jpg'
+import landingPageImage from '../../assets/images/tour-ring/landing-page.jpg'
+import landingPageMobileImage from '../../assets/images/tour-ring/landing-page-mobile.jpg'
+import communityImage from '../../assets/images/tour-ring/community.jpg'
+import communityMobileImage from '../../assets/images/tour-ring/community-mobile.jpg'
+import lectureRoomImage from '../../assets/images/tour-ring/lecture-room.jpg'
+import lectureRoomMobileImage from '../../assets/images/tour-ring/lecture-room-mobile.jpg'
+import virtualTourImage from '../../assets/images/tour-ring/virtual-tour.jpg'
+import virtualTourMobileImage from '../../assets/images/tour-ring/virtual-tour-mobile.jpg'
 // import landingPageMobileImage from './img/landing-page-mobile.jpg'
 import './tour-ring.scss'
 
@@ -27,7 +27,7 @@ class TourRing extends PureComponent {
   }
 
   componentWillMount () {
-    let imageContext = require.context('../../assets/images', true, /\.(png|jpe?g|svg)$/)
+    let imageContext = require.context('../../assets/images/tour-ring', true, /\.(png|jpe?g|svg)$/)
     const filePaths = []
     imageContext.keys().forEach(key => {
       filePaths.push(imageContext(key))
@@ -57,46 +57,54 @@ class TourRing extends PureComponent {
         </article>
         <div className="tour-ring-area-scroller">
           <ImageScroller
-            image={landingPageImage}>
+            image={landingPageImage}
+            color="#BBEA86">
           </ImageScroller>
         </div>
         <div className="tour-ring-area-scroller">
           <ImageScroller
             className="image-scroller-mobile"
-            image={landingPageMobileImage}>
+            image={landingPageMobileImage}
+            color="#BBEA86">
           </ImageScroller>
         </div>
         <div className="tour-ring-area-scroller">
           <ImageScroller
-            image={communityImage}>
-          </ImageScroller>
-        </div>
-        <div className="tour-ring-area-scroller">
-          <ImageScroller
-            className="image-scroller-mobile"
-            image={communityMobileImage}>
-          </ImageScroller>
-        </div>
-        <div className="tour-ring-area-scroller">
-          <ImageScroller
-            image={lectureRoomImage}>
+            image={communityImage}
+            color="#BBEA86">
           </ImageScroller>
         </div>
         <div className="tour-ring-area-scroller">
           <ImageScroller
             className="image-scroller-mobile"
-            image={lectureRoomMobileImage}>
+            image={communityMobileImage}
+            color="#BBEA86">
           </ImageScroller>
         </div>
         <div className="tour-ring-area-scroller">
           <ImageScroller
-            image={virtualTourImage}>
+            image={lectureRoomImage}
+            color="#BBEA86">
           </ImageScroller>
         </div>
         <div className="tour-ring-area-scroller">
           <ImageScroller
             className="image-scroller-mobile"
-            image={virtualTourMobileImage}>
+            image={lectureRoomMobileImage}
+            color="#BBEA86">
+          </ImageScroller>
+        </div>
+        <div className="tour-ring-area-scroller">
+          <ImageScroller
+            image={virtualTourImage}
+            color="#BBEA86">
+          </ImageScroller>
+        </div>
+        <div className="tour-ring-area-scroller">
+          <ImageScroller
+            className="image-scroller-mobile"
+            image={virtualTourMobileImage}
+            color="#BBEA86">
           </ImageScroller>
         </div>
         <div className="tour-ring-area-links">

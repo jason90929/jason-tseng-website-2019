@@ -5,7 +5,7 @@ import cx from 'classnames'
 import Btn from '../../components/Btn/Btn'
 import Icon from '../../components/Icon/Icon'
 import Stroke from '../../components/Effects/Stroke'
-import seeShowcaseImage from '../../assets/images/see-showcase.svg'
+import seeShowcaseImage from '../../assets/images/home/see-showcase.svg'
 import './portfolio.scss'
 
 class ShowcaseBtn extends PureComponent {

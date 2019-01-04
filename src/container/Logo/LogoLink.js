@@ -4,7 +4,7 @@ import connect from 'react-redux/es/connect/connect'
 import pagination from '../../actions/pagination'
 import Icon from '../../components/Icon/Icon'
 import Logo from './Logo'
-import logoJOrange from '../../assets/images/logo/j-without-bg-orange.png'
+import logoJOrange from '../../assets/images/home/logo/j-without-bg-orange.png'
 import './logo-link.scss'
 
 class LogoLink extends Component {

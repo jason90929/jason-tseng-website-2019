@@ -20,7 +20,7 @@ class Home extends PureComponent {
   }
 
   componentWillMount () {
-    let imageContext = require.context('../../assets/images', true, /\.(png|jpe?g|svg)$/)
+    let imageContext = require.context('../../assets/images/home', true, /\.(png|jpe?g|svg)$/)
     const filePaths = []
     imageContext.keys().forEach(key => {
       filePaths.push(imageContext(key))
