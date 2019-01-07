@@ -54,6 +54,19 @@ class TourRing extends PureComponent {
         <article className="tour-ring-area-article tour-ring-area-first">
           <h1>TourRing</h1>
           <h2>iStaging</h2>
+          <br/>
+          <p>Frontend development: Jason Tseng, Kevin Hu, Loofabu Chang, Blacky Chen, Ray Chen, Felix Chang</p>
+          <br/>
+          <p>UI design: Zoi Zhou, Kendra Chen</p>
+          <br/>
+          <p>
+            Launch product:&nbsp;
+            <a href="https://tourring.istaging.com/57ecd104816dfa005668e914">
+              https://tourring.istaging.com/57ecd104816dfa005668e914
+            </a>
+            <br/>
+            It will go to call the real estate agent, I recommend just look samples as below.
+          </p>
         </article>
         <div className="tour-ring-area-scroller">
           <ImageScroller
