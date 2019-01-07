@@ -51,7 +51,7 @@ class TourRing extends PureComponent {
       <Area
         className={className}
         key="Area">
-        <article className="tour-ring-area-article">
+        <article className="tour-ring-area-article tour-ring-area-first">
           <h1>TourRing</h1>
           <h2>iStaging</h2>
         </article>
@@ -107,26 +107,28 @@ class TourRing extends PureComponent {
             color="#BBEA86">
           </ImageScroller>
         </div>
-        <div className="tour-ring-area-links">
-          <em>Some introduction of TourRing:</em>
-          <a
-            href="https://www.youtube.com/watch?v=DmBkWe-g07A"
-            target="_blank"
-            rel="noopener noreferrer">
-            TourRing 看房篇
-          </a>
-          <a
-            href="https://www.youtube.com/watch?v=WfK87CNcvhM"
-            target="_blank"
-            rel="noopener noreferrer">
-            TourRing
-          </a>
-          <a
-            href="https://www.youtube.com/watch?v=zbYUZl02rzc"
-            target="_blank"
-            rel="noopener noreferrer">
-            TourRing FR
-          </a>
+        <div className="tour-ring-area-last">
+          <div className="tour-ring-area-links">
+            <em>Some introduction of TourRing:</em>
+            <a
+              href="https://www.youtube.com/watch?v=DmBkWe-g07A"
+              target="_blank"
+              rel="noopener noreferrer">
+              TourRing 看房篇
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=WfK87CNcvhM"
+              target="_blank"
+              rel="noopener noreferrer">
+              TourRing
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=zbYUZl02rzc"
+              target="_blank"
+              rel="noopener noreferrer">
+              TourRing FR
+            </a>
+          </div>
         </div>
       </Area>
     ]
