@@ -34,7 +34,7 @@ class ThirdArea extends Component {
       video: threeDDollHouseVideo,
       color: '#dac9ff',
       onClick: () => {
-        window.open('http://3d-dollhouse.avosapps.us/scene/62cb3510-6708-4f62-94c3-f9936db7e20b')
+        history.push('/3d-dollhouse')
       }
     }, {
       text: 'Nong Design',
