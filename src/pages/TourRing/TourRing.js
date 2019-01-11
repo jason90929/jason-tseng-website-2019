@@ -16,6 +16,8 @@ import virtualTourImage from '../../assets/images/tour-ring/virtual-tour.jpg'
 import virtualTourMobileImage from '../../assets/images/tour-ring/virtual-tour-mobile.jpg'
 // import landingPageMobileImage from './img/landing-page-mobile.jpg'
 import './tour-ring.scss'
+import PortfolioSwitcher from '../../container/PortfolioSwitcher/PortfolioSwitcher'
+import history from '../../history'
 
 class TourRing extends PureComponent {
   constructor () {
@@ -40,6 +42,10 @@ class TourRing extends PureComponent {
     }))
   }
 
+  onClickNext = () => {
+    history.push('/3d-dollhouse')
+  }
+
   render () {
     const className = cx('tour-ring-area', {
       'area-loaded': this.props.isLoaded
@@ -61,8 +67,11 @@ class TourRing extends PureComponent {
           <br/>
           <p>
             Launch product:&nbsp;
-            <a href="https://tourring.istaging.com/57ecd104816dfa005668e914">
-              https://tourring.istaging.com/57ecd104816dfa005668e914
+            <a
+              href="https://tourring.istaging.com/ab5744d6-4fd6-4ce8-b1fd-dc4bc1a5ff7d"
+              target="_blank"
+              rel="noopener noreferrer">
+              https://tourring.istaging.com/ab5744d6-4fd6-4ce8-b1fd-dc4bc1a5ff7d
             </a>
             <br/>
             It will go to call the real estate agent, I recommend just look samples as below.
@@ -143,6 +152,10 @@ class TourRing extends PureComponent {
             </a>
           </div>
         </div>
+        <PortfolioSwitcher
+          key="PortfolioSwitcher"
+          onClickNext={this.onClickNext}
+        />
       </Area>
     ]
   }

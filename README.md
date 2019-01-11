@@ -27,7 +27,7 @@ http://3d-dollhouse.avosapps.us/scene/62cb3510-6708-4f62-94c3-f9936db7e20b
 * 90%~95% coding in whole project by me
 
 Live Tour (VR Viewer) (2017/05~present) in iStaging products
-https://livetour.istaging.com/57ecd104816dfa005668e914
+https://livetour.istaging.com/ab5744d6-4fd6-4ce8-b1fd-dc4bc1a5ff7d
 * Vue, Krpano
 * Krpano for 3d scene panorama viewing
 * NodeJS express for simple SEO rendering
